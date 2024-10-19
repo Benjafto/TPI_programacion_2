@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CostaFascinosa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a65a485d425333f5dbcab0be828efbbed93ab75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3631a4dd9a6b817045cc08566a658472f8c66329")]
 [assembly: System.Reflection.AssemblyProductAttribute("CostaFascinosa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CostaFascinosa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
