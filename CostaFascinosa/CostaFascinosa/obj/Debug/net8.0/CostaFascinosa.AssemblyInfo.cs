@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("API_CostaFascinosa")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("CostaFascinosa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6263326091437420190a7c78e92f92ff92557e21")]
-[assembly: System.Reflection.AssemblyProductAttribute("API_CostaFascinosa")]
-[assembly: System.Reflection.AssemblyTitleAttribute("API_CostaFascinosa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f84b8a310273bcc4ca8d2e24ec8117ba1188509")]
+[assembly: System.Reflection.AssemblyProductAttribute("CostaFascinosa")]
+[assembly: System.Reflection.AssemblyTitleAttribute("CostaFascinosa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
