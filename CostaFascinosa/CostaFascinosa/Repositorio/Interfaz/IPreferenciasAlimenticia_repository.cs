@@ -9,14 +9,10 @@ namespace CostaFascinosa.Repository.Interfaz
 {
     public interface IPreferenciaAlimenticia
     {
-        List<PreferenciasAlimenticia> GetPreferenciasAlimenticias();
-
         PreferenciasAlimenticia GetPreferenciaAlimenticia(int id);
 
         bool add(PreferenciasAlimenticia preferenciaAlimentici);
 
-        bool delete(int id);
-
-        bool update(PreferenciasAlimenticia preferenciaAlimenticia);
+        
     }
 }

@@ -9,14 +9,7 @@ namespace CostaFascinosa.Repository.Interfaz
 {
     public interface IPasajero_repository
     {
-        List<Pasajero> GetPasajeros();
-
-        Pasajero GetPasajero(int id);
-
         bool add(Pasajero pasajero);
 
-        bool delete(int id);
-
-        bool update(Pasajero pasajero);
     }
 }

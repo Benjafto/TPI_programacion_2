@@ -15,8 +15,5 @@ namespace CostaFascinosa.Repository.Interfaz
 
         bool add(Contacto contacto);
 
-        bool delete(int id);
-
-        bool update(Contacto contacto);
     }
 }

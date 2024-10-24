@@ -11,8 +11,6 @@ namespace CostaFascinosa.Repository.Interfaz
     {
         List<Coordinadore> GetCoordinadores();
 
-        Coordinadore GetCoordinador(int id);
-
         bool add(Coordinadore cordinador);
 
         bool delete(int id);

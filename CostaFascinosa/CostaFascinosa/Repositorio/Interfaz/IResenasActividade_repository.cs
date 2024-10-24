@@ -9,14 +9,17 @@ namespace CostaFascinosa.Repository.Interfaz
 {
     public interface IResenasActividade_repository
     {
-        List<ResenasActividade> GetResenasActividades();
-
-        ResenasActividade GetResenaActividad(int id);
-
         bool add(ResenasActividade resenaActividad);
-
-        bool delete(int id);
-
         bool update(ResenasActividade resenaActividad);
+        bool delete(ResenasActividade resenasActividade);
+
+        ResenasActividade GetResenaActividadByPuntuacion(int puntuacion);
+
+        ResenasActividade GetResenaActividadByActividad(int id);
+
+        ResenasActividade GetResenaActividadByUsuario(int id);
+
+
+
     }
 }

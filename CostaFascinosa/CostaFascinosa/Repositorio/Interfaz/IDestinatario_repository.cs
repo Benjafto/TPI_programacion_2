@@ -11,13 +11,7 @@ namespace CostaFascinosa.Repository.Interfaz
     {
         List<Destinatario> GetDestinatarios();
 
-        Destinatario GetDestinatario(int id);
-
         bool add(Destinatario destinatario);
-
-        bool delete(int id);
-
-        bool update(Destinatario destinatario);
 
     }
 }

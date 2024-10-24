@@ -11,12 +11,9 @@ namespace CostaFascinosa.Repository.Interfaz
     {
         List<CodVestimenta> GetCodigosVestimentas();
 
-        CodVestimenta GetCodVestimenta(int id);
-
         bool add(CodVestimenta codVestimenta);
 
         bool delete(int id);
 
-        bool update(CodVestimenta codVestimenta);
     }
 }

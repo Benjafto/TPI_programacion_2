@@ -18,6 +18,18 @@ namespace CostaFascinosa.Repository.Interfaz
         bool update(Actividade actividad);
 
         bool delete(int id);
-        
+
+        List<Actividade> GetActividadesByCategoria(int id);
+        List<Actividade> GetActividadesByTurno(int id);
+        List<Actividade> GetActividadesByDestinatario(int id);
+        List<Actividade> GetActividadesByCodigoVestimenta(int id);
+        List<Actividade> GetActividadesByZona(int id);
+        List<Actividade> GetActividadesByRequiereReserva(bool requiereReserva);
+
+
+
+
+
+
     }
 }

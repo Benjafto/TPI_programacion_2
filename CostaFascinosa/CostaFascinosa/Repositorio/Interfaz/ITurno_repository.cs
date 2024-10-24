@@ -9,13 +9,9 @@ namespace CostaFascinosa.Repository.Interfaz
 {
     public interface ITurno_repository
     {
-        List<Turno> GetTurnos();
-
-        Turno GetTurno(int id);
 
         bool add(Turno turno);
 
-        bool delete(int id);
 
         bool update(Turno turno);
     }

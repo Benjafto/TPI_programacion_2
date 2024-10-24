@@ -10,12 +10,7 @@ namespace CostaFascinosa.Repository.Interfaz
     public interface ICategoria_repository
     {
         List<Categoria> GetCategorias();
-
-        Categoria GetCategoria(int id);
         bool add(Categoria categoria);
-
-        bool update(Categoria categoria);
-
         bool delete(int id);
     }
 }
