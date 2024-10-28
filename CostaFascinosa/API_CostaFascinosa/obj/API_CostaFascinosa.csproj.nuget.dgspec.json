@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\usuario\\Documents\\TUP\\2º CUATRIMESTRE\\PROGRAMACIÓN II\\TPI\\TPI_programacion_2\\CostaFascinosa\\API_CostaFascinosa\\API_CostaFascinosa.csproj": {}
+    "C:\\Users\\pbenj\\OneDrive\\Desktop\\TPI\\TPI_programacion_2\\CostaFascinosa\\API_CostaFascinosa\\API_CostaFascinosa.csproj": {}
   },
   "projects": {
-    "C:\\Users\\usuario\\Documents\\TUP\\2º CUATRIMESTRE\\PROGRAMACIÓN II\\TPI\\TPI_programacion_2\\CostaFascinosa\\API_CostaFascinosa\\API_CostaFascinosa.csproj": {
+    "C:\\Users\\pbenj\\OneDrive\\Desktop\\TPI\\TPI_programacion_2\\CostaFascinosa\\API_CostaFascinosa\\API_CostaFascinosa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\usuario\\Documents\\TUP\\2º CUATRIMESTRE\\PROGRAMACIÓN II\\TPI\\TPI_programacion_2\\CostaFascinosa\\API_CostaFascinosa\\API_CostaFascinosa.csproj",
+        "projectUniqueName": "C:\\Users\\pbenj\\OneDrive\\Desktop\\TPI\\TPI_programacion_2\\CostaFascinosa\\API_CostaFascinosa\\API_CostaFascinosa.csproj",
         "projectName": "API_CostaFascinosa",
-        "projectPath": "C:\\Users\\usuario\\Documents\\TUP\\2º CUATRIMESTRE\\PROGRAMACIÓN II\\TPI\\TPI_programacion_2\\CostaFascinosa\\API_CostaFascinosa\\API_CostaFascinosa.csproj",
-        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\usuario\\Documents\\TUP\\2º CUATRIMESTRE\\PROGRAMACIÓN II\\TPI\\TPI_programacion_2\\CostaFascinosa\\API_CostaFascinosa\\obj\\",
+        "projectPath": "C:\\Users\\pbenj\\OneDrive\\Desktop\\TPI\\TPI_programacion_2\\CostaFascinosa\\API_CostaFascinosa\\API_CostaFascinosa.csproj",
+        "packagesPath": "C:\\Users\\pbenj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pbenj\\OneDrive\\Desktop\\TPI\\TPI_programacion_2\\CostaFascinosa\\API_CostaFascinosa\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\pbenj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -33,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\usuario\\Documents\\TUP\\2º CUATRIMESTRE\\PROGRAMACIÓN II\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\CostaFascinosa.csproj": {
-                "projectPath": "C:\\Users\\usuario\\Documents\\TUP\\2º CUATRIMESTRE\\PROGRAMACIÓN II\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\CostaFascinosa.csproj"
+              "C:\\Users\\pbenj\\OneDrive\\Desktop\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\CostaFascinosa.csproj": {
+                "projectPath": "C:\\Users\\pbenj\\OneDrive\\Desktop\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\CostaFascinosa.csproj"
               }
             }
           }
@@ -86,21 +82,17 @@
         }
       }
     },
-    "C:\\Users\\usuario\\Documents\\TUP\\2º CUATRIMESTRE\\PROGRAMACIÓN II\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\CostaFascinosa.csproj": {
+    "C:\\Users\\pbenj\\OneDrive\\Desktop\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\CostaFascinosa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\usuario\\Documents\\TUP\\2º CUATRIMESTRE\\PROGRAMACIÓN II\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\CostaFascinosa.csproj",
+        "projectUniqueName": "C:\\Users\\pbenj\\OneDrive\\Desktop\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\CostaFascinosa.csproj",
         "projectName": "CostaFascinosa",
-        "projectPath": "C:\\Users\\usuario\\Documents\\TUP\\2º CUATRIMESTRE\\PROGRAMACIÓN II\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\CostaFascinosa.csproj",
-        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\usuario\\Documents\\TUP\\2º CUATRIMESTRE\\PROGRAMACIÓN II\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\obj\\",
+        "projectPath": "C:\\Users\\pbenj\\OneDrive\\Desktop\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\CostaFascinosa.csproj",
+        "packagesPath": "C:\\Users\\pbenj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pbenj\\OneDrive\\Desktop\\TPI\\TPI_programacion_2\\CostaFascinosa\\CostaFascinosa\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\pbenj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -19,4 +19,7 @@ namespace CostaFascinosa.Repository.Interfaz
 
         bool update(Usuario usuario);
     }
+
+
+
 }
