@@ -1,12 +1,12 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Repository.Interfaz;
+using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Implementacion
+namespace CostaFascinosa.Servicio.Implementacion
 {
     public class TiposServicio_repository : ITiposServicio_repository
     {

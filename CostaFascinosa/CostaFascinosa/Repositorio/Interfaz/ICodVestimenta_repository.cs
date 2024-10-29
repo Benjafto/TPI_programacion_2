@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface ICodVestimenta_repository
     {
-        List<CodVestimenta> GetCodigosVestimentas();
+        Task<List<CodVestimenta>> GetCodigosVestimentas();
 
-        bool add(CodVestimenta codVestimenta);
+        Task<bool> add(CodVestimenta codVestimenta);
 
-        bool delete(int id);
+        Task<bool> delete(int id);
 
     }
 }

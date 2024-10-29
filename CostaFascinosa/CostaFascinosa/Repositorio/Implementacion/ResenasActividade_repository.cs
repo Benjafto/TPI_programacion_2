@@ -1,12 +1,12 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Repository.Interfaz;
+using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Implementacion
+namespace CostaFascinosa.Servicio.Implementacion
 {
     public class ResenasActividade_repository : IResenasActividade_repository
     {
@@ -22,17 +22,22 @@ namespace CostaFascinosa.Repository.Implementacion
             throw new NotImplementedException();
         }
 
-        public bool delete(int id)
+        public bool delete(ResenasActividade resenasActividade)
         {
             throw new NotImplementedException();
         }
 
-        public ResenasActividade GetResenaActividad(int id)
+        public ResenasActividade GetResenaActividadByActividad(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<ResenasActividade> GetResenasActividades()
+        public ResenasActividade GetResenaActividadByPuntuacion(int puntuacion)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ResenasActividade GetResenaActividadByUsuario(int id)
         {
             throw new NotImplementedException();
         }

@@ -2,6 +2,8 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.JavaScript;
+using System.Text.Json.Serialization;
 
 namespace CostaFascinosa.Data;
 
@@ -10,10 +12,10 @@ public partial class CodVestimenta
     public int IdCodVestimenta { get; set; }
 
     public string Descripcion { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<Actividade> Actividades { get; set; } = new List<Actividade>();
-
+    [JsonIgnore]
     public virtual ICollection<Amenity> Amenities { get; set; } = new List<Amenity>();
-
+    [JsonIgnore]
     public virtual ICollection<ServiciosGastronomico> ServiciosGastronomicos { get; set; } = new List<ServiciosGastronomico>();
 }

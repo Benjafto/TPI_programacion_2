@@ -1,12 +1,12 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Repository.Interfaz;
+using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Implementacion
+namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Actividade_repository : IActividade_repository
     {
@@ -15,16 +15,6 @@ namespace CostaFascinosa.Repository.Implementacion
         public Actividade_repository(COSTA_FASCINOSAContext context)
         {
             _context = context;
-        }
-
-        public bool add(Actividade actividad)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool delete(int id)
-        {
-            throw new NotImplementedException();
         }
 
         public Actividade GetActividad(int id)
@@ -36,6 +26,46 @@ namespace CostaFascinosa.Repository.Implementacion
         {
             throw new NotImplementedException();
         }
+
+        public List<Actividade> GetActividadesByCategoria(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Actividade> GetActividadesByCodigoVestimenta(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Actividade> GetActividadesByDestinatario(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Actividade> GetActividadesByRequiereReserva(bool requiereReserva)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Actividade> GetActividadesByTurno(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Actividade> GetActividadesByZona(int id)
+        {
+            throw new NotImplementedException();
+        }
+        public bool add(Actividade actividad)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
 
         public bool update(Actividade actividad)
         {

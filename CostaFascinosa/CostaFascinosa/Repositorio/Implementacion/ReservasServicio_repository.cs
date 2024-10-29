@@ -1,12 +1,12 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Repository.Interfaz;
+using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Implementacion
+namespace CostaFascinosa.Servicio.Implementacion
 {
     public class ReservasServicio_repository : IReservasServicio_repository
     {
@@ -27,12 +27,17 @@ namespace CostaFascinosa.Repository.Implementacion
             throw new NotImplementedException();
         }
 
-        public ReservasServicio GetReservaServicio(int id)
+        public List<ReservasServicio> GetReservasServicioByActividad(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<ReservasServicio> GetReservasServicios()
+        public List<ReservasServicio> GetReservasServicioByFechaYUsuario(int id, DateTime fechaInicial, DateTime fechaFinal)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<ReservasServicio> GetReservasServicioByUsuario(int id)
         {
             throw new NotImplementedException();
         }

@@ -1,5 +1,5 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Repository.Interfaz;
+using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,27 +10,19 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Zona_service : IZona_service
     {
-        public bool add(Zona zona)
+        private readonly IZona_repository _repo;
+
+        public Zona_service(IZona_repository repo)
+        {
+            _repo = repo;
+        }
+
+        public Task<bool> add(Zona zona)
         {
             throw new NotImplementedException();
         }
 
-        public bool delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Zona GetZona(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Zona> GetZonas()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Zona zona)
+        public Task<List<Zona>> GetAll()
         {
             throw new NotImplementedException();
         }

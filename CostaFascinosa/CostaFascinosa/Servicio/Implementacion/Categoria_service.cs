@@ -1,5 +1,6 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Repository.Interfaz;
+using CostaFascinosa.Servicio.Interfaz;
+using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,31 +9,28 @@ using System.Threading.Tasks;
 
 namespace CostaFascinosa.Servicio.Implementacion
 {
-    internal class Categoria_service : ICategoria_service
+    public class Categoria_service : ICategoria_service
     {
-        public bool add(Categoria categoria)
+        private readonly ICategoria_repository _repository;
+
+        public Categoria_service(ICategoria_repository repository)
         {
-            throw new NotImplementedException();
+            _repository = repository;
         }
 
-        public bool delete(int id)
+        public async Task<bool> add(Categoria categoria)
         {
-            throw new NotImplementedException();
+            return await _repository.add(categoria);
         }
 
-        public Categoria GetCategoria(int id)
+        public async Task<bool> delete(int id)
         {
-            throw new NotImplementedException();
+            return await _repository.delete(id);
         }
 
-        public List<Categoria> GetCategorias()
+        public async Task<List<Categoria>> GetCategorias()
         {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Categoria categoria)
-        {
-            throw new NotImplementedException();
+            return await _repository.GetCategorias();
         }
     }
 }

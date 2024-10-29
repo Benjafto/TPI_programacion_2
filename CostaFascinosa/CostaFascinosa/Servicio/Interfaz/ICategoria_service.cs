@@ -5,17 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface ICategoria_service
     {
-        List<Categoria> GetCategorias();
-
-        Categoria GetCategoria(int id);
-        bool add(Categoria categoria);
-
-        bool update(Categoria categoria);
-
-        bool delete(int id);
+        Task<List<Categoria>> GetCategorias();
+        Task<bool> add(Categoria categoria);
+        Task<bool> delete(int id);
     }
 }

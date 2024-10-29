@@ -1,5 +1,5 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Repository.Interfaz;
+using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,29 +10,26 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class CodVestimenta_service : ICodVestimenta_service
     {
-        public bool add(CodVestimenta codVestimenta)
+        private readonly ICodVestimenta_repository _repo;
+
+        public CodVestimenta_service(ICodVestimenta_repository repo)
         {
-            throw new NotImplementedException();
+            _repo = repo;
         }
 
-        public bool delete(int id)
+        public async Task<bool> add(CodVestimenta codVestimenta)
         {
-            throw new NotImplementedException();
+            return await _repo.add(codVestimenta);
         }
 
-        public List<CodVestimenta> GetCodigosVestimentas()
+        public async Task<bool> delete(int id)
         {
-            throw new NotImplementedException();
+            return await _repo.delete(id);
         }
 
-        public CodVestimenta GetCodVestimenta(int id)
+        public async Task<List<CodVestimenta>> GetCodigosVestimentas()
         {
-            throw new NotImplementedException();
-        }
-
-        public bool update(CodVestimenta codVestimenta)
-        {
-            throw new NotImplementedException();
+            return await _repo.GetCodigosVestimentas();
         }
     }
 }

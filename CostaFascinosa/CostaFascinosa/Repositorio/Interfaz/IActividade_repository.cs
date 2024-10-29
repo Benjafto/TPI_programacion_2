@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IActividade_repository
     {
@@ -25,11 +25,6 @@ namespace CostaFascinosa.Repository.Interfaz
         List<Actividade> GetActividadesByCodigoVestimenta(int id);
         List<Actividade> GetActividadesByZona(int id);
         List<Actividade> GetActividadesByRequiereReserva(bool requiereReserva);
-
-
-
-
-
 
     }
 }
