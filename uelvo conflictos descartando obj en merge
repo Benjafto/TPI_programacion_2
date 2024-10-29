@@ -1,0 +1,38 @@
+[33mcommit 266dfea5515911803c49a2122ffac5c9d9b7c628[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Merge: 78e2914 f892f22
+Author: FlorC <412289@tecnicatura.frc.utn.edu.ar>
+Date:   Tue Oct 29 02:37:49 2024 -0300
+
+    Espero que no se rompa todo
+
+[33mcommit 186f8dfc3ae64bc433669786963f4940ff72148b[m
+Merge: 70d56b5 f9fd906
+Author: Benjafto <benjaminpbs@gmail.com>
+Date:   Sat Oct 19 15:23:19 2024 -0300
+
+    agregacion de archivos de servicio mas correcion de archivos autogenerados
+
+[33mcommit f9fd906fcbf0a39974efb82ae020a69b541c68ab[m
+Merge: b5a44ff 9351662
+Author: Benjafto <97058597+Benjafto@users.noreply.github.com>
+Date:   Sat Oct 19 15:20:02 2024 -0300
+
+    Merge pull request #2 from Benjafto/servicio
+    
+    Capa Servicio: Creacion de interfaces, definicion de metodos e implementaciones.
+
+[33mcommit 3631a4dd9a6b817045cc08566a658472f8c66329[m
+Merge: 6f84b8a b5a44ff
+Author: Benjafto <benjaminpbs@gmail.com>
+Date:   Sat Oct 19 15:10:14 2024 -0300
+
+    Resolver conflicto en archivos de obj
+
+[33mcommit b5a44ff39be5c646c22aa91dbda40423a9be6ce1[m
+Merge: 6263326 7380b2e
+Author: Benjafto <97058597+Benjafto@users.noreply.github.com>
+Date:   Sat Oct 19 15:04:30 2024 -0300
+
+    Merge pull request #1 from Benjafto/repositorio
+    
+    Patron repository: Creacion de interfaces, definicion de metodos e implementaciones.
