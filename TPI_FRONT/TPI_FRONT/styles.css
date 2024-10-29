@@ -2,13 +2,10 @@
     font-family: 'FuenteBreathing';
     src: url(./tipograph/Breathing.ttf);
 }
-@font-face {
-    font-family: 'Raleway';
-    src: url();
-}
+
 p
 {
-    font-family: Raleway;
+    font-family: "Raleway", serif;
 }
 
 a
@@ -19,7 +16,56 @@ a
     font-size: inherit;
 }
 
-/* Login */
+/* Inicio + Login */
+.wave-text-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.wave-text {
+    font-size: 2.8em;
+    font-weight: normal;
+    color: #0077be;
+    display: inline-block;
+    position: relative;
+    animation: wave 2s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.wave-text span {
+    display: inline-block;
+    transform-origin: bottom;
+    animation: wave 3s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.wave-text span:nth-child(1) { animation-delay: 0s; }
+.wave-text span:nth-child(2) { animation-delay: 0.1s; }
+.wave-text span:nth-child(3) { animation-delay: 0.2s; }
+.wave-text span:nth-child(4) { animation-delay: 0.3s; }
+.wave-text span:nth-child(5) { animation-delay: 0.4s; }
+.wave-text span:nth-child(6) { animation-delay: 0.5s; }
+.wave-text span:nth-child(7) { animation-delay: 0.6s; }
+.wave-text span:nth-child(8) { animation-delay: 0.7s; }
+.wave-text span:nth-child(9) { animation-delay: 0.8s; }
+.wave-text span:nth-child(10) { animation-delay: 0.9s; }
+.wave-text span:nth-child(11) { animation-delay: 1s; }
+.wave-text span:nth-child(12) { animation-delay: 1.1s; }
+.wave-text span:nth-child(13) { animation-delay: 1.2s; }
+.wave-text span:nth-child(14) { animation-delay: 1.3s; }
+.wave-text span:nth-child(15) { animation-delay: 1.4s; }
+.wave-text span:nth-child(16) { animation-delay: 1.5s; }
+.wave-text span:nth-child(17) { animation-delay: 1.6s; }
+.wave-text span:nth-child(18) { animation-delay: 1.7s; }
+.wave-text span:nth-child(19) { animation-delay: 1.8s; }
+.wave-text span:nth-child(20) { animation-delay: 1.9s; }
+
+
 .login-box {
     background-color: #033E51;
     width: 100%; 
@@ -37,12 +83,15 @@ a
     letter-spacing: 5px;
 }
 
+
 .tagline {
     font-family: Raleway;
+    font-optical-sizing: auto;
     font-size: 1.1rem;
     color: #ebefe8;
     margin-bottom: 1rem;
 }
+
 
 .form-control {
     background-color:#ebefe8; 
