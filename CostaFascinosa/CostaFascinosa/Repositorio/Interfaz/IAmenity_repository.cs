@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IAmenity_repository
     {
@@ -17,5 +17,20 @@ namespace CostaFascinosa.Repository.Interfaz
         bool update(Amenity amenity);
 
         bool delete(int id);
+        List<Amenity> GetAmenitiesByCategoria(int id);
+
+        List<Amenity> GetAmenitiesByTurno(int id);
+
+        List<Amenity> GetAmenitiesByDestinatario(int id);
+
+        List<Amenity> GetAmenitiesByCodigoVestimenta(int id);
+
+        List<Amenity> GetAmenitiesByZona(int id);
+
+
+
+
+
+
     }
 }

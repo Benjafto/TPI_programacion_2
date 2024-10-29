@@ -5,18 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IZona_repository
     {
-        List<Zona> GetZonas();
-
-        Zona GetZona(int id);
-
-        bool add(Zona zona);
-
-        bool delete(int id);
-
-        bool update(Zona zona);
+        Task<List<Zona>> GetAll();
+        Task<bool> add(Zona zona);
     }
 }

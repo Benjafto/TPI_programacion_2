@@ -1,12 +1,12 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Repository.Interfaz;
+using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Implementacion
+namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Habitacione_repository : IHabitacione_repository
     {
@@ -22,22 +22,7 @@ namespace CostaFascinosa.Repository.Implementacion
             throw new NotImplementedException();
         }
 
-        public bool delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public Habitacione GetHabitacion(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Habitacione> GetHabitaciones()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Habitacione habitacion)
         {
             throw new NotImplementedException();
         }

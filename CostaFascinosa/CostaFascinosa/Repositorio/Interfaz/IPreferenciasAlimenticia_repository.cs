@@ -5,18 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IPreferenciaAlimenticia
     {
-        List<PreferenciasAlimenticia> GetPreferenciasAlimenticias();
-
         PreferenciasAlimenticia GetPreferenciaAlimenticia(int id);
 
         bool add(PreferenciasAlimenticia preferenciaAlimentici);
 
-        bool delete(int id);
-
-        bool update(PreferenciasAlimenticia preferenciaAlimenticia);
+        
     }
 }

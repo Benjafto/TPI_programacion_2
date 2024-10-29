@@ -1,12 +1,12 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Repository.Interfaz;
+using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Implementacion
+namespace CostaFascinosa.Servicio.Implementacion
 {
     public class ConsumosGastronomico_repository : IConsumosGastronomico_repository
     {
@@ -22,22 +22,12 @@ namespace CostaFascinosa.Repository.Implementacion
             throw new NotImplementedException();
         }
 
-        public bool delete(int id)
+        public List<ConsumosGastronomico> GetConsumosGastronomicosByFechaYUsuario(int id, DateTime fechaInicial, DateTime fechaFinal)
         {
             throw new NotImplementedException();
         }
 
-        public ConsumosGastronomico GetConsumoGastronomico(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ConsumosGastronomico> GetConsumosGastronomicos()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(ConsumosGastronomico consumosGastronomico)
+        public List<ConsumosGastronomico> GetConsumosGastronomicosByUsuario(int id)
         {
             throw new NotImplementedException();
         }

@@ -5,18 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IConsumosGastronomico_repository
     {
-        List<ConsumosGastronomico> GetConsumosGastronomicos();
-
-        ConsumosGastronomico GetConsumoGastronomico(int id);
-
         bool add(ConsumosGastronomico consumosGastronomico);
 
-        bool delete(int id);
+        List<ConsumosGastronomico> GetConsumosGastronomicosByUsuario(int id);
 
-        bool update(ConsumosGastronomico consumosGastronomico);
+        List<ConsumosGastronomico> GetConsumosGastronomicosByFechaYUsuario(int id, DateTime fechaInicial, DateTime fechaFinal);
+
+
     }
 }

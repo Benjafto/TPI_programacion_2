@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CostaFascinosa.Data;
 
@@ -11,7 +12,9 @@ public partial class Categoria
 
     public string Descripcion { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<Actividade> Actividades { get; set; } = new List<Actividade>();
 
+    [JsonIgnore]
     public virtual ICollection<Amenity> Amenities { get; set; } = new List<Amenity>();
 }

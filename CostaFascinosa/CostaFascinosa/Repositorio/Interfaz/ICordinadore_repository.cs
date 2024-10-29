@@ -5,13 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface ICordinadore_repository
     {
         List<Coordinadore> GetCoordinadores();
-
-        Coordinadore GetCoordinador(int id);
 
         bool add(Coordinadore cordinador);
 

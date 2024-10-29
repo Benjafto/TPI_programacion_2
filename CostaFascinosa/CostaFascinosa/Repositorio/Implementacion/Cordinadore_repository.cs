@@ -1,12 +1,12 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Repository.Interfaz;
+using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Implementacion
+namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Cordinadore_repository : ICordinadore_repository
     {
@@ -23,11 +23,6 @@ namespace CostaFascinosa.Repository.Implementacion
         }
 
         public bool delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Coordinadore GetCoordinador(int id)
         {
             throw new NotImplementedException();
         }

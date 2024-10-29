@@ -5,18 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IProductosGastronomico_repository
     {
-        List<ProductosGastronomico> GetProductosGastronomicos();
 
         ProductosGastronomico GetProductoGastronomico(int id);
-
+        ProductosGastronomico GetProductosGastronomicoByTipo(int id);
         bool add(ProductosGastronomico productoGastronomico);
 
-        bool delete(int id);
-
-        bool update(ProductosGastronomico productoGastronomico);
     }
 }

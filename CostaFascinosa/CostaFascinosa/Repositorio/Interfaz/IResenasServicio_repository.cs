@@ -5,18 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IResenasServicio_repository
     {
-        List<ResenasServicio> GetResenasServicios();
-
-        ResenasServicio GetResenaServicio(int id);
-
+      
         bool add(ResenasServicio resenaServicio);
-
-        bool delete(int id);
-
         bool update(ResenasServicio resenasServicio);
+
+        bool delete(ResenasServicio resenasServicio);
+
+        List<ResenasServicio> GetResenasServicioByUsuario(int id);
+        List<ResenasServicio> GetResenasServicioByPuntuacion(int puntuacion);
+        List<ResenasServicio> GetResenasServicioByServicio(int id);
+
     }
 }

@@ -5,18 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface ITurno_repository
     {
-        List<Turno> GetTurnos();
-
-        Turno GetTurno(int id);
-
-        bool add(Turno turno);
-
-        bool delete(int id);
-
-        bool update(Turno turno);
+        Task<List<Turno>> GetAll();
+        Task<bool> add(Turno turno);
     }
 }

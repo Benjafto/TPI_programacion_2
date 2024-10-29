@@ -5,18 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Repository.Interfaz
+namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IPasajero_repository
     {
-        List<Pasajero> GetPasajeros();
-
-        Pasajero GetPasajero(int id);
-
         bool add(Pasajero pasajero);
 
-        bool delete(int id);
-
-        bool update(Pasajero pasajero);
     }
 }
