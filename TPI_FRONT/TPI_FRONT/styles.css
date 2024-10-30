@@ -16,6 +16,7 @@ a
     font-size: inherit;
 }
 
+
 /* Inicio + Login */
 .wave-text-container {
     text-align: center;
@@ -193,6 +194,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway';
 }
 
+
+
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -295,4 +298,114 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
     color: #666;
     margin-bottom: 15px;
+}
+
+
+
+/* Media Query para pantallas pequeñas (teléfonos) */
+@media (max-width: 767px) {
+    /* Ajustes en el header */
+    .header-area .container h1 {
+        font-size: medium;
+        text-align: center;
+    }
+    .navbar-brand img {
+        max-height: 40px;
+    }
+    .navbar-nav .nav-link {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        height: 300px;
+        padding: 20px;
+        text-align: center;
+    }
+    .hero-section h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    .hero-section p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    /* Sección 'Nosotros' */
+    .nosotros-section {
+        padding: 50px 20px;
+    }
+    .nosotros-section h2 {
+        font-size: 24px;
+    }
+    .nosotros-section p {
+        font-size: 14px;
+    }
+    .nosotros-section img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Texto de las actividades */
+    .activities-item-rating,
+    .activities-item-price,
+    .activities-item-description {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    /* Botones */
+    .btn-submit, .btn-reservar {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    /* Footer */
+    footer p {
+        font-size: 14px;
+    }
+}
+
+/* Media Query para pantallas medianas (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Ajustes en el header */
+    .header-area .container h1 {
+        font-size: large;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 8px 12px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 400px;
+    }
+    .hero-section h1 {
+        font-size: 36px;
+    }
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    /* Sección 'Nosotros' */
+    .nosotros-section {
+        padding: 75px 30px;
+    }
+    .nosotros-section h2 {
+        font-size: 28px;
+    }
+
+    /* Actividades */
+    .activities-item-rating,
+    .activities-item-price,
+    .activities-item-description {
+        font-size: 15px;
+    }
+    
+    /* Footer */
+    footer p {
+        font-size: 15px;
+    }
 }

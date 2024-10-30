@@ -1,4 +1,5 @@
 ﻿using CostaFascinosa.Data;
+using CostaFascinosa.Repositorio.Interfaz;
 using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Servicio.Implementacion
+namespace CostaFascinosa.Repositorio.Implementacion
 {
     public class Destinatario_repository : IDestinatario_repository
     {
@@ -17,12 +18,12 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context = context;
         }
 
-        public bool add(Destinatario destinatario)
+        public Task<bool> Add(Destinatario destinatario)
         {
             throw new NotImplementedException();
         }
 
-        public List<Destinatario> GetDestinatarios()
+        public Task<List<Destinatario>> GetDestinatarios()
         {
             throw new NotImplementedException();
         }

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Servicio.Implementacion
+namespace CostaFascinosa.Repositorio.Implementacion
 {
     public class Actividade_repository : IActividade_repository
     {

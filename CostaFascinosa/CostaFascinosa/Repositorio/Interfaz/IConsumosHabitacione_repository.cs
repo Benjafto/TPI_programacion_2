@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Servicio.Interfaz
+namespace CostaFascinosa.Repositorio.Interfaz
 {
     public interface IConsumosHabitacione_repository
     {
