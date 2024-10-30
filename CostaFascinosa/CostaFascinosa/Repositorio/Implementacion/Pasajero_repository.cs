@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Servicio.Implementacion
+namespace CostaFascinosa.Repositorio.Implementacion
 {
     public class Pasajero_repository : IPasajero_repository
     {
@@ -17,9 +17,10 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context = context;
         }
 
-        public bool add(Pasajero pasajero)
+        public async Task<bool> Add(Pasajero pasajero)
         {
-            throw new NotImplementedException();
+            _context.Pasajeros.Add(pasajero);
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }

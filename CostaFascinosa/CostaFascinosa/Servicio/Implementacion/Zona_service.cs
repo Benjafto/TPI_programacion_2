@@ -17,14 +17,14 @@ namespace CostaFascinosa.Servicio.Implementacion
             _repo = repo;
         }
 
-        public Task<bool> add(Zona zona)
+        public async Task<bool> Add(Zona zona)
         {
-            throw new NotImplementedException();
+            return await _repo.Add(zona);
         }
 
-        public Task<List<Zona>> GetAll()
+        public async Task<List<Zona>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _repo.GetAll();
         }
     }
 }

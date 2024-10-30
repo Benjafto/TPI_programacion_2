@@ -11,6 +11,5 @@ namespace CostaFascinosa.Repositorio.Interfaz
     {
         List<ConsumosHabitacione> GetConsumosHabitacionesByHabitacion(int numeroHabitacion);
 
-
     }
 }

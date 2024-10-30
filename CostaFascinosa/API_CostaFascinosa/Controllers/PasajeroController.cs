@@ -7,34 +7,27 @@ namespace API_CostaFascinosa.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DestinatarioController : ControllerBase
+    public class PasajeroController : ControllerBase
     {
+        private readonly IPasajero_service _serv;
 
-        private readonly IDestinatario_service _serv;
-
-        public DestinatarioController(IDestinatario_service serv)
+        public PasajeroController(IPasajero_service serv)
         {
             _serv = serv;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get()
-        {
-            return Ok(await _serv.GetDestinatarios());  
-        }
-
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Destinatario dest)
+        public async Task<IActionResult> Post([FromBody] Pasajero pasajero) 
         {
             try
             {
-                if (dest == null)
+                if(pasajero == null)
                 {
-                    return BadRequest("Debe ingresar los datos solicitados");
+                    return BadRequest("Debe ingresar los datos solicitados.");
                 }
                 else
                 {
-                    return Ok(await _serv.Add(dest));
+                    return Ok(await _serv.Add(pasajero));
                 }
             }
             catch (Exception)

@@ -10,13 +10,5 @@ namespace CostaFascinosa.Servicio.Interfaz
     public interface IConsumosHabitacione_service
     {
         List<ConsumosHabitacione> GetConsumosHabitaciones();
-
-        ConsumosHabitacione GetConsumoHabitacion(int id);
-
-        bool add(ConsumosHabitacione consumosHabitacione);
-
-        bool delete(int id);
-
-        bool update(ConsumosHabitacione consumosHabitacione);
     }
 }

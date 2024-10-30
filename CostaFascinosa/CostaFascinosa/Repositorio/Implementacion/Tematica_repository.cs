@@ -1,12 +1,13 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Servicio.Interfaz;
+using CostaFascinosa.Repositorio.Interfaz;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Servicio.Implementacion
+namespace CostaFascinosa.Repositorio.Implementacion
 {
     public class Tematica_repository : ITematica_repository
     {
@@ -17,29 +18,15 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context = context;
         }
 
-        public bool add(Tematica tematica)
+        public async Task<bool> Add(Tematica tematica)
         {
-            throw new NotImplementedException();
+            _context.Add(tematica);
+            return await _context.SaveChangesAsync() > 0;
         }
 
-        public bool delete(int id)
+        public async Task<List<Tematica>> GetTematicas()
         {
-            throw new NotImplementedException();
-        }
-
-        public Tematica GetTematica(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Tematica> GetTematicas()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Tematica tematica)
-        {
-            throw new NotImplementedException();
+            return await _context.Tematicas.ToListAsync();
         }
     }
 }

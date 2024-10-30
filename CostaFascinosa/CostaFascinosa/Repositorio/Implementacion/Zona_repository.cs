@@ -1,5 +1,6 @@
 ﻿using CostaFascinosa.Data;
 using CostaFascinosa.Servicio.Interfaz;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +17,15 @@ namespace CostaFascinosa.Servicio.Implementacion
         {
             _context = context;
         }
-        public Task<List<Zona>> GetAll()
+        public async Task<List<Zona>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Zonas.ToListAsync();
         }
 
-        public Task<bool> add(Zona zona)
+        public async Task<bool> Add(Zona zona)
         {
-            throw new NotImplementedException();
+            _context.Zonas.Add(zona);
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }

@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CostaFascinosa.Data;
 
@@ -19,6 +20,7 @@ public partial class ProductosGastronomico
 
     public decimal? Precio { get; set; }
 
+    [JsonIgnore]    
     public virtual ICollection<ConsumosGastronomico> ConsumosGastronomicos { get; set; } = new List<ConsumosGastronomico>();
 
     public virtual ServiciosGastronomico IdServicioNavigation { get; set; }

@@ -1,4 +1,5 @@
 ﻿using CostaFascinosa.Data;
+using CostaFascinosa.Repositorio.Interfaz;
 using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
@@ -10,29 +11,21 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class TiposProducto_service : ITiposProducto_service
     {
-        public bool add(TiposProducto tipoProducto)
+        private readonly ITiposProducto_repository _repo;
+
+        public TiposProducto_service(ITiposProducto_repository repo)
         {
-            throw new NotImplementedException();
+            _repo = repo;
         }
 
-        public bool delete(int id)
+        public async Task<bool> Add(TiposProducto tipoProducto)
         {
-            throw new NotImplementedException();
+            return await _repo.Add(tipoProducto);
         }
 
-        public TiposProducto GetTipoProducto(int id)
+        public async Task<List<TiposProducto>> GetTiposProductos()
         {
-            throw new NotImplementedException();
-        }
-
-        public List<TiposProducto> GetTiposProductos()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(TiposProducto tipoProducto)
-        {
-            throw new NotImplementedException();
+            return await _repo.GetTiposProductos();
         }
     }
 }

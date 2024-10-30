@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CostaFascinosa.Data;
 
@@ -16,7 +17,7 @@ public partial class Coordinadore
     public DateTime? FechaNac { get; set; }
 
     public int? Nacionalidad { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<Actividade> Actividades { get; set; } = new List<Actividade>();
 
     public virtual Nacionalidade NacionalidadNavigation { get; set; }

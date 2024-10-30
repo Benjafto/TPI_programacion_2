@@ -5,18 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Servicio.Interfaz
+namespace CostaFascinosa.Repositorio.Interfaz
 {
     public interface ITematica_repository
     {
-        List<Tematica> GetTematicas();
+        Task<List<Tematica>> GetTematicas();
+        Task<bool> Add(Tematica tematica);
 
-        Tematica GetTematica(int id);
-
-        bool add(Tematica tematica);
-
-        bool delete(int id);
-
-        bool update(Tematica tematica);
     }
 }

@@ -9,14 +9,9 @@ namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface ITematica_service
     {
-        List<Tematica> GetTematicas();
+        Task<List<Tematica>> GetTematicas();
+        Task<bool> Add(Tematica tematica);
 
-        Tematica GetTematica(int id);
-
-        bool add(Tematica tematica);
-
-        bool delete(int id);
-
-        bool update(Tematica tematica);
+        
     }
 }

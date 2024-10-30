@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CostaFascinosa.Data;
 
@@ -10,6 +11,6 @@ public partial class Tematica
     public int IdTematica { get; set; }
 
     public string Descripcion { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<ServiciosGastronomico> ServiciosGastronomicos { get; set; } = new List<ServiciosGastronomico>();
 }

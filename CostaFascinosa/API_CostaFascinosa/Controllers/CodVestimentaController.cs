@@ -41,33 +41,5 @@ namespace API_CostaFascinosa.Controllers
                 return StatusCode(500, "Error interno.");
             }
         }
-        [HttpDelete]
-        public async Task<IActionResult> Delete([FromQuery]int id)
-        {
-            try
-            {
-                if (id == 0)
-                {
-                    return BadRequest("Debe ingresar datos válidos.");
-                }
-                else
-                {
-                    var vestDeleted = await _serv.delete(id);
-                    if(vestDeleted == false)
-                    {
-                        return NotFound("No se encontré ese código.");
-                    }
-                    else
-                    {
-                        return Ok("El código de vestimenta fue eliminado.");
-                    }
-                    
-                }
-            }
-            catch (Exception)
-            {
-                return StatusCode(500, "Error interno.");
-            }
-        }
     }
 }

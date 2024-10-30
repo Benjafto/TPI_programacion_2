@@ -17,29 +17,14 @@ namespace CostaFascinosa.Servicio.Implementacion
             _repository = repository;
         }
 
-        public bool add(TiposServicio tipoServicio)
+        public async Task<bool> Add(TiposServicio tipoServicio)
         {
-            throw new NotImplementedException();
+            return await _repository.Add(tipoServicio);
         }
 
-        public bool delete(int id)
+        public async Task<List<TiposServicio>> GetTiposServicios()
         {
-            throw new NotImplementedException();
-        }
-
-        public TiposServicio GetTipoServicio(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<TiposServicio> GetTiposServicios()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(TiposServicio tipoServicio)
-        {
-            throw new NotImplementedException();
+            return await _repository.GetTiposServicios();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IPasajero_repository
     {
-        bool add(Pasajero pasajero);
+        Task<bool> Add(Pasajero pasajero);
 
     }
 }

@@ -23,11 +23,6 @@ namespace CostaFascinosa.Servicio.Implementacion
             return await _repository.add(categoria);
         }
 
-        public async Task<bool> delete(int id)
-        {
-            return await _repository.delete(id);
-        }
-
         public async Task<List<Categoria>> GetCategorias()
         {
             return await _repository.GetCategorias();

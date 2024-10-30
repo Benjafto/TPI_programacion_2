@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CostaFascinosa.Data;
 
@@ -31,15 +32,16 @@ public partial class Pasajero
 
     public int? NroHabitacion { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<Contacto> Contactos { get; set; } = new List<Contacto>();
-
+    [JsonIgnore]
     public virtual Estado IdEstadoNavigation { get; set; }
-
+    [JsonIgnore]
     public virtual TiposDocumento IdTipoDocumentoNavigation { get; set; }
-
+    [JsonIgnore]
     public virtual Nacionalidade NacionalidadNavigation { get; set; }
-
+    [JsonIgnore]
     public virtual Habitacione NroHabitacionNavigation { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
 }

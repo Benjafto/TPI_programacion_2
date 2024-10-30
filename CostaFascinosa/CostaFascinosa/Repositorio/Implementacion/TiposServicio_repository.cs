@@ -1,5 +1,6 @@
 ﻿using CostaFascinosa.Data;
 using CostaFascinosa.Servicio.Interfaz;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,29 +18,15 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context = context;
         }
 
-        public bool add(TiposServicio tipoServicio)
+        public async Task<bool> Add(TiposServicio tipoServicio)
         {
-            throw new NotImplementedException();
+           _context.TiposServicios.Add(tipoServicio);
+           return await _context.SaveChangesAsync() > 0;
         }
 
-        public bool delete(int id)
+        public async Task<List<TiposServicio>> GetTiposServicios()
         {
-            throw new NotImplementedException();
-        }
-
-        public TiposServicio GetTipoServicio(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<TiposServicio> GetTiposServicios()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(TiposServicio tipoServicio)
-        {
-            throw new NotImplementedException();
+           return await _context.TiposServicios.ToListAsync();  
         }
     }
 }

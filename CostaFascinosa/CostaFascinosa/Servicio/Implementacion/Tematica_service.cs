@@ -1,4 +1,5 @@
 ﻿using CostaFascinosa.Data;
+using CostaFascinosa.Repositorio.Interfaz;
 using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
@@ -10,29 +11,21 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Tematica_service : ITematica_service
     {
-        public bool add(Tematica tematica)
+        private readonly ITematica_repository _repo;
+
+        public Tematica_service(ITematica_repository repo)
         {
-            throw new NotImplementedException();
+            _repo = repo;
         }
 
-        public bool delete(int id)
+        public async Task<bool> Add(Tematica tematica)
         {
-            throw new NotImplementedException();
+            return await _repo.Add(tematica);
         }
 
-        public Tematica GetTematica(int id)
+        public async Task<List<Tematica>> GetTematicas()
         {
-            throw new NotImplementedException();
-        }
-
-        public List<Tematica> GetTematicas()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Tematica tematica)
-        {
-            throw new NotImplementedException();
+            return await _repo.GetTematicas();
         }
     }
 }

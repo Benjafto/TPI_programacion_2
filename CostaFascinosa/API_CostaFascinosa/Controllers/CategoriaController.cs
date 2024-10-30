@@ -42,28 +42,5 @@ namespace API_CostaFascinosa.Controllers
                 return StatusCode(500, "Error interno.");
             }
         }
-
-        [HttpDelete]
-        public async Task<IActionResult> Delete([FromQuery] int id)
-        {
-            try
-            {
-                var catdeleted = await _serv.delete(id);
-                if (catdeleted != false)
-                {
-                    return Ok("La cateogoría fue borrada.");
-                }
-                else
-                {
-                    return NotFound("No existe el item a borrar.");
-                }
-            }
-            catch (Exception)
-            {
-
-                return StatusCode(500, "Error interno.");
-            }
-        }
-
     }
 }

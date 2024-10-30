@@ -1,38 +1,27 @@
 ﻿using CostaFascinosa.Data;
 using CostaFascinosa.Servicio.Interfaz;
+using CostaFascinosa.Repositorio.Implementacion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CostaFascinosa.Repositorio.Interfaz;
 
 namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Cordinadore_service : ICordinadore_service
     {
-        public bool add(Coordinadore cordinador)
+        private readonly ICordinadore_repository _repo;
+
+        public Cordinadore_service(ICordinadore_repository repo)
         {
-            throw new NotImplementedException();
+            _repo = repo;
         }
 
-        public bool delete(int id)
+        public async Task<List<Coordinadore>> GetCoordinadores()
         {
-            throw new NotImplementedException();
-        }
-
-        public Coordinadore GetCoordinador(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Coordinadore> GetCoordinadores()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Coordinadore cordinador)
-        {
-            throw new NotImplementedException();
+           return await _repo.GetCoordinadores();
         }
     }
 }

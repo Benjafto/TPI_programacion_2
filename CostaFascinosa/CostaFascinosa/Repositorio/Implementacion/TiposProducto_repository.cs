@@ -1,12 +1,13 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Servicio.Interfaz;
+using CostaFascinosa.Repositorio.Interfaz;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Servicio.Implementacion
+namespace CostaFascinosa.Repositorio.Implementacion
 {
     public class TiposProducto_repository : ITiposProducto_repository
     {
@@ -17,29 +18,15 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context = context;
         }
 
-        public bool add(TiposProducto tipoProducto)
+        public async Task<bool> Add(TiposProducto tipoProducto)
         {
-            throw new NotImplementedException();
+            _context.TiposProductos.Add(tipoProducto);
+            return await _context.SaveChangesAsync() > 0;
         }
 
-        public bool delete(int id)
+        public async Task<List<TiposProducto>> GetTiposProductos()
         {
-            throw new NotImplementedException();
-        }
-
-        public TiposProducto GetTipoProducto(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<TiposProducto> GetTiposProductos()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(TiposProducto tipoProducto)
-        {
-            throw new NotImplementedException();
+            return await _context.TiposProductos.ToListAsync();
         }
     }
 }

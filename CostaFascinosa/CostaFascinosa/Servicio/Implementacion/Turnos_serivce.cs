@@ -10,21 +10,21 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Turnos_serivce : ITurno_service
     {
-        private readonly IZona_repository _repository;
+        private readonly ITurno_repository _repo;
 
-        public Turnos_serivce(IZona_repository repository)
+        public Turnos_serivce(ITurno_repository repo)
         {
-            _repository = repository;
+            _repo = repo;
         }
 
-        public Task<bool> add(Turno turno)
+        public async Task<bool> Add(Turno turno)
         {
-            throw new NotImplementedException();
+            return await _repo.Add(turno);
         }
 
-        public Task<List<Turno>> GetAll()
+        public async Task<List<Turno>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _repo.GetAll();
         }
     }
 }

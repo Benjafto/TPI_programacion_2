@@ -9,14 +9,7 @@ namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface ITiposServicio_repository
     {
-        List<TiposServicio> GetTiposServicios();
-
-        TiposServicio GetTipoServicio(int id);
-
-        bool add(TiposServicio tipoServicio);
-
-        bool delete(int id);
-
-        bool update(TiposServicio tipoServicio);
+        Task<List<TiposServicio>> GetTiposServicios();
+        Task<bool> Add(TiposServicio tipoServicio);
     }
 }

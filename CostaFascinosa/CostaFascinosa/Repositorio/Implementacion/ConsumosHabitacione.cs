@@ -1,4 +1,5 @@
 ﻿using CostaFascinosa.Data;
+using CostaFascinosa.Repositorio.Interfaz;
 using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Servicio.Implementacion
+namespace CostaFascinosa.Repositorio.Implementacion
 {
     public class ConsumosHabitacione : IConsumosHabitacione_repository
     {
@@ -17,14 +18,9 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context = context;
         }
 
-        public List<ConsumosHabitacione> GetConsumosHabitacionesByHabitacion(int numeroHabitacion)
+        public List<Data.ConsumosHabitacione> GetConsumosHabitacionesByHabitacion(int numeroHabitacion)
         {
             throw new NotImplementedException();
-        }
-
-        List<Data.ConsumosHabitacione> IConsumosHabitacione_repository.GetConsumosHabitacionesByHabitacion(int numeroHabitacion)
-        {
-            throw new NotImplementedException();   //QUÉ ES ESTO???
         }
     }
 }

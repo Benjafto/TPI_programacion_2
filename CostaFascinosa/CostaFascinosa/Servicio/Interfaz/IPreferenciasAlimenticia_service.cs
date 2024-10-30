@@ -9,14 +9,7 @@ namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IPreferenciaAlimenticia_service
     {
-        List<PreferenciasAlimenticia> GetPreferenciasAlimenticias();
-
-        PreferenciasAlimenticia GetPreferenciaAlimenticia(int id);
-
-        bool add(PreferenciasAlimenticia preferenciaAlimentici);
-
-        bool delete(int id);
-
-        bool update(PreferenciasAlimenticia preferenciaAlimenticia);
+        Task<List<PreferenciasAlimenticia>> GetPreferenciasAlimenticias();
+        Task<bool> Add(PreferenciasAlimenticia pref);
     }
 }

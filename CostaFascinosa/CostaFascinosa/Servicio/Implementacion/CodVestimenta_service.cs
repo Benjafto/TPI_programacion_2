@@ -22,11 +22,6 @@ namespace CostaFascinosa.Servicio.Implementacion
             return await _repo.add(codVestimenta);
         }
 
-        public async Task<bool> delete(int id)
-        {
-            return await _repo.delete(id);
-        }
-
         public async Task<List<CodVestimenta>> GetCodigosVestimentas()
         {
             return await _repo.GetCodigosVestimentas();

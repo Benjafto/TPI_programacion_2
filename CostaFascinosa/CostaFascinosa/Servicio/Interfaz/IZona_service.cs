@@ -10,6 +10,6 @@ namespace CostaFascinosa.Servicio.Interfaz
     public interface IZona_service
     {
         Task<List<Zona>> GetAll();
-        Task<bool> add(Zona zona);
+        Task<bool> Add(Zona zona);
     }
 }

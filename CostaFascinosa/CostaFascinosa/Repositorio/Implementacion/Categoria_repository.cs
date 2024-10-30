@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Servicio.Implementacion
+namespace CostaFascinosa.Repositorio.Implementacion
 {
     public class Categoria_repository : ICategoria_repository
     {
@@ -27,20 +27,6 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context.Categorias.Add(categoria);
             await _context.SaveChangesAsync();
             return true;
-        }
-        public async Task<bool> delete(int id)
-        {
-            var catDeleted = _context.Categorias.FirstOrDefault(x => x.IdCategoria == id);
-            if (catDeleted != null)
-            {
-                _context.Categorias.Remove(catDeleted);
-                await _context.SaveChangesAsync();
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
     }
 }

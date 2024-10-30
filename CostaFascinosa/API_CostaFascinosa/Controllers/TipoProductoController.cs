@@ -1,40 +1,37 @@
-﻿using CostaFascinosa.Servicio.Interfaz;
-using CostaFascinosa.Data;
+﻿using CostaFascinosa.Data;
+using CostaFascinosa.Servicio.Interfaz;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Runtime.CompilerServices;
 
 namespace API_CostaFascinosa.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TurnoController : ControllerBase
+    public class TipoProductoController : ControllerBase
     {
-        private readonly ITurno_service _serv;
+        private readonly ITiposProducto_service _serv;
 
-        public TurnoController(ITurno_service serv)
+        public TipoProductoController(ITiposProducto_service serv)
         {
             _serv = serv;
         }
-
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok( await _serv.GetAll());
+            return Ok(await _serv.GetTiposProductos());
         }
-
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Turno turno)
+        public async Task<IActionResult> Post([FromBody] TiposProducto tipo)
         {
             try
             {
-                if(turno == null)
+                if (tipo == null)
                 {
-                    return BadRequest("Debe ingresar los datos solicitados");
+                    return BadRequest("Debe ingresar los datos solicitados.");
                 }
                 else
                 {
-                    return Ok( await _serv.Add(turno));
+                    return Ok(await _serv.Add(tipo));
                 }
             }
             catch (Exception)
@@ -42,6 +39,7 @@ namespace API_CostaFascinosa.Controllers
 
                 return StatusCode(500, "Error interno.");
             }
+
         }
     }
 }

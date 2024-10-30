@@ -10,29 +10,16 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Pasajero_service : IPasajero_service
     {
-        public bool add(Pasajero pasajero)
+        private readonly IPasajero_repository _repo;
+
+        public Pasajero_service(IPasajero_repository repo)
         {
-            throw new NotImplementedException();
+            _repo = repo;
         }
 
-        public bool delete(int id)
+        public async Task<bool> Add(Pasajero pasajero)
         {
-            throw new NotImplementedException();
-        }
-
-        public Pasajero GetPasajero(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Pasajero> GetPasajeros()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Pasajero pasajero)
-        {
-            throw new NotImplementedException();
+            return await _repo.Add(pasajero);
         }
     }
 }

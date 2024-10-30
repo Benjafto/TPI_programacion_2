@@ -12,8 +12,5 @@ namespace CostaFascinosa.Servicio.Interfaz
         Task<List<CodVestimenta>> GetCodigosVestimentas();
 
         Task<bool> add(CodVestimenta codVestimenta);
-
-        Task<bool> delete(int id);
-
     }
 }

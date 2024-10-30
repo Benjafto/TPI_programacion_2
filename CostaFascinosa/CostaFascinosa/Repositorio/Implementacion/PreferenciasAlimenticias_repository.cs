@@ -1,12 +1,13 @@
 ﻿using CostaFascinosa.Data;
-using CostaFascinosa.Servicio.Interfaz;
+using CostaFascinosa.Repositorio.Interfaz;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Servicio.Implementacion
+namespace CostaFascinosa.Repositorio.Implementacion
 {
     public class PreferenciasAlimenticias_repository : IPreferenciaAlimenticia
     {
@@ -17,14 +18,15 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context = context;
         }
 
-        public bool add(PreferenciasAlimenticia preferenciaAlimentici)
+        public async Task<bool> Add(PreferenciasAlimenticia pref)
         {
-            throw new NotImplementedException();
+            _context.PreferenciasAlimenticias.Add(pref);
+            return await _context.SaveChangesAsync() > 0;
         }
 
-        public PreferenciasAlimenticia GetPreferenciaAlimenticia(int id)
+        public async Task<List<PreferenciasAlimenticia>> GetPrefAlimenticia()
         {
-            throw new NotImplementedException();
+            return await _context.PreferenciasAlimenticias.ToListAsync();
         }
     }
 }

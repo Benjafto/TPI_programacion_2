@@ -1,4 +1,5 @@
 ﻿using CostaFascinosa.Data;
+using CostaFascinosa.Repositorio.Interfaz;
 using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
@@ -10,29 +11,21 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Destinatario_service : IDestinatario_service
     {
-        public bool add(Destinatario destinatario)
+        private readonly IDestinatario_repository _repo;
+
+        public Destinatario_service(IDestinatario_repository repo)
         {
-            throw new NotImplementedException();
+            _repo = repo;
         }
 
-        public bool delete(int id)
+        public async Task<bool> Add(Destinatario destinatario)
         {
-            throw new NotImplementedException();
+            return await _repo.Add(destinatario);
         }
 
-        public Destinatario GetDestinatario(int id)
+        public async Task<List<Destinatario>> GetDestinatarios()
         {
-            throw new NotImplementedException();
-        }
-
-        public List<Destinatario> GetDestinatarios()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Destinatario destinatario)
-        {
-            throw new NotImplementedException();
+            return await _repo.GetDestinatarios();
         }
     }
 }

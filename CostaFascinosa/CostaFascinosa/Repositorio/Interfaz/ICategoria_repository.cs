@@ -11,6 +11,5 @@ namespace CostaFascinosa.Servicio.Interfaz
     {
         Task<List<Categoria>> GetCategorias();
         Task<bool> add(Categoria categoria);
-        Task<bool> delete(int id);
     }
 }

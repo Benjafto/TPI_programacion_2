@@ -27,19 +27,5 @@ namespace CostaFascinosa.Repositorio.Implementacion
             await _context.SaveChangesAsync();
             return true;
         }
-        public async Task<bool> delete(int id)
-        {
-            var vestDeleted = _context.CodVestimentas.FirstOrDefault(x => x.IdCodVestimenta == id);
-            if (vestDeleted != null)
-            {
-                _context.CodVestimentas.Remove(vestDeleted);
-                await _context.SaveChangesAsync();
-                return true;
-            }
-            else
-            { 
-                return false;
-            }
-        }
     }
 }

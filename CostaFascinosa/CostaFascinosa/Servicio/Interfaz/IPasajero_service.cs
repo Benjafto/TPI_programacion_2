@@ -9,14 +9,8 @@ namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IPasajero_service
     {
-        List<Pasajero> GetPasajeros();
+       
+        Task<bool> Add(Pasajero pasajero);
 
-        Pasajero GetPasajero(int id);
-
-        bool add(Pasajero pasajero);
-
-        bool delete(int id);
-
-        bool update(Pasajero pasajero);
     }
 }

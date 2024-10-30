@@ -1,6 +1,6 @@
 ﻿using CostaFascinosa.Data;
 using CostaFascinosa.Repositorio.Interfaz;
-using CostaFascinosa.Servicio.Interfaz;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,14 +18,15 @@ namespace CostaFascinosa.Repositorio.Implementacion
             _context = context;
         }
 
-        public Task<bool> Add(Destinatario destinatario)
+        public async Task<bool> Add(Destinatario destinatario)
         {
-            throw new NotImplementedException();
+            _context.Add(destinatario);
+            return await _context.SaveChangesAsync() > 0;
         }
 
-        public Task<List<Destinatario>> GetDestinatarios()
+        public async Task<List<Destinatario>> GetDestinatarios()
         {
-            throw new NotImplementedException();
+            return await _context.Destinatarios.ToListAsync();
         }
     }
 }

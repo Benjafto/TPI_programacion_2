@@ -9,14 +9,7 @@ namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface ITiposProducto_service
     {
-        List<TiposProducto> GetTiposProductos();
-
-        TiposProducto GetTipoProducto(int id);
-
-        bool add(TiposProducto tipoProducto);
-
-        bool delete(int id);
-
-        bool update(TiposProducto tipoProducto);
+        Task<List<TiposProducto>> GetTiposProductos();
+        Task<bool> Add(TiposProducto tipoProducto);
     }
 }

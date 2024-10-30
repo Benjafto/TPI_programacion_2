@@ -5,18 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CostaFascinosa.Servicio.Interfaz
+namespace CostaFascinosa.Repositorio.Interfaz
 {
     public interface ITiposProducto_repository
     {
-        List<TiposProducto> GetTiposProductos();
+        Task<List<TiposProducto>> GetTiposProductos();
 
-        TiposProducto GetTipoProducto(int id);
-
-        bool add(TiposProducto tipoProducto);
-
-        bool delete(int id);
-
-        bool update(TiposProducto tipoProducto);
+        Task<bool> Add(TiposProducto tipoProducto);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CostaFascinosa.Data;
+using CostaFascinosa.Repositorio.Interfaz;
 using CostaFascinosa.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
@@ -10,29 +11,21 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class PreferenciaAlimenticia_service : IPreferenciaAlimenticia_service
     {
-        public bool add(PreferenciasAlimenticia preferenciaAlimentici)
+        private readonly IPreferenciaAlimenticia _repo;
+
+        public PreferenciaAlimenticia_service(IPreferenciaAlimenticia repo)
         {
-            throw new NotImplementedException();
+            _repo = repo;
         }
 
-        public bool delete(int id)
+        public async Task<bool> Add(PreferenciasAlimenticia pref)
         {
-            throw new NotImplementedException();
+            return await _repo.Add(pref);
         }
 
-        public PreferenciasAlimenticia GetPreferenciaAlimenticia(int id)
+        public async Task<List<PreferenciasAlimenticia>> GetPreferenciasAlimenticias()
         {
-            throw new NotImplementedException();
-        }
-
-        public List<PreferenciasAlimenticia> GetPreferenciasAlimenticias()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(PreferenciasAlimenticia preferenciaAlimenticia)
-        {
-            throw new NotImplementedException();
+            return await _repo.GetPrefAlimenticia();
         }
     }
 }

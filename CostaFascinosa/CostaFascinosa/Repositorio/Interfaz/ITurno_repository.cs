@@ -10,6 +10,6 @@ namespace CostaFascinosa.Servicio.Interfaz
     public interface ITurno_repository
     {
         Task<List<Turno>> GetAll();
-        Task<bool> add(Turno turno);
+        Task<bool> Add(Turno turno);
     }
 }
