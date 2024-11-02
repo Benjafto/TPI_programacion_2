@@ -19,7 +19,7 @@ namespace CostaFascinosa.Servicio.Implementacion
 
         public List<Amenity> GetAmenities()
         {
-            throw new NotImplementedException();
+            return _context.Amenities.ToList();
         }
 
         public List<Amenity> GetAmenitiesByCategoria(int id)

@@ -10,6 +10,14 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Actividade_service : IActividade_service
     {
+
+        private readonly IActividade_repository _repository;
+
+        public Actividade_service(IActividade_repository repository)
+        {
+            _repository = repository;
+        }
+
         public bool add(Actividade actividad)
         {
             throw new NotImplementedException();
@@ -27,7 +35,7 @@ namespace CostaFascinosa.Servicio.Implementacion
 
         public List<Actividade> GetActividades()
         {
-            throw new NotImplementedException();
+            return _repository.GetActividades();
         }
 
         public bool update(Actividade actividad)

@@ -1,5 +1,6 @@
 ﻿using CostaFascinosa.Data;
 using CostaFascinosa.Servicio.Interfaz;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace CostaFascinosa.Repositorio.Implementacion
 
         public List<Actividade> GetActividades()
         {
-            throw new NotImplementedException();
+            return  _context.Actividades.ToList();
         }
 
         public List<Actividade> GetActividadesByCategoria(int id)

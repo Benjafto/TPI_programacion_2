@@ -6,7 +6,7 @@
     <title>Actividades</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/TPI_FRONT/styles.css">
+    <link rel="stylesheet" href="actividades_style.css  ">
 </head>
 <body>
 
@@ -43,97 +43,18 @@
     </div>
 
     <div class="container my-5">
-        <div class="row">
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card h-100">
-                    <img src="/TPI_FRONT/img/karaoke.jpg" class="card-img-top" alt="Karaoke">
-                    <div class="card-body text-center">
-                        <div class="activities-item-rating">
-                            <span class="stars">★★</span>
-                            <span class="rating">2.00</span>
-                        </div>
-                        <h5 class="card-title">Noche de Karaoke</h5>
-                        <p class="card-text">Divertite participando de la competencia de karaoke como nunca lo hiciste y alegrá tu gran noche de crucero</p>
-                        <p class="activities-item-price">$5.00</p>
-                        <p class="activities-item-description"> • +16 años • Aventura</p>
-                    </div>
-                    <div class="card-footer border-top-0">
-                        <a href="#" class="btn btn-reservar btn-lg w-100">Reservar ahora</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card h-100">
-                    <img src="/TPI_FRONT/img/stand-up.png" class="card-img-top" alt="stand-up">
-                    <div class="card-body text-center">
-                        <div class="activities-item-rating">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating">5.00</span>
-                        </div>
-                        <h5 class="card-title">Stand Up</h5>
-                        <p class="card-text">Reservá tu entrada para ver el show de comedia dirigido por el mejor comediante de todos los cruceros</p>
-                        <p class="activities-item-price">$25.00</p>  
-                        <p class="activities-item-description"> • +16 años • Aventura</p>  
-                    </div>
-                    <div class="card-footer bg-white border-top-0">
-                        <a href="#" class="btn btn-reservar btn-lg w-100">Reservar ahora</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card h-100">
-                    <img src="/TPI_FRONT/img/climbing.png" class="card-img-top" alt="Escalada de muro">
-                    <div class="card-body text-center">
-                        <div class="activities-item-rating">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating">5.00</span>
-                        </div>
-                        <h5 class="card-title">Escalada de muro</h5>
-                        <p class="card-text">Animate a estar en las alturas y participá de la competencia de escalada en muro. El que llegue primero en el menor tiempo posible sera el ganador</p>
-                        <p class="activities-item-price">$25.00</p>
-                        <p class="activities-item-description"> • +16 años • Aventura</p>
-                    </div>
-                    <div class="card-footer bg-white border-top-0">
-                        <a href="#" class="btn btn-reservar btn-lg w-100">Reservar ahora</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card h-100">
-                    <img src="/TPI_FRONT/img/natacion.jpg" class="card-img-top" alt="Competencia de natación">
-                    <div class="card-body text-center">
-                        <div class="activities-item-rating">
-                            <span class="stars">★★★★</span>
-                            <span class="rating">4.00</span>
-                        </div>
-                        <h5 class="card-title">Competencia de natación</h5>
-                        <p class="card-text">Demostrá tus habilidades acuáticas y participá de la competencia de natacion. Es una carrera de punta a punta en una piscina de 25 metros.</p>
-                        <p class="activities-item-price">$5.00</p>
-                        <p class="activities-item-description"> • +16 años • Aventura</p>
-                    </div>
-                    <div class="card-footer bg-white border-top-0">
-                        <a href="#" class="btn btn-reservar btn-lg w-100 ">Reservar ahora</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-4">
-              <div class="card h-100">
-                  <img src="/TPI_FRONT/img/quemado.jpg" class="card-img-top" alt="Competencia de quemado">
-                  <div class="card-body text-center">
-                    <div class="activities-item-rating">
-                        <span class="stars">★★★</span>
-                        <span class="rating">3.00</span>
-                    </div>
-                      <h5 class="card-title">Juego del quemado</h5>
-                      <p class="card-text">Trata de golpear con seis pelotas dispuestas para el juego a los rivales del equipo contrario para así eliminarlos</p>
-                      <p class="activities-item-price">$25.00</p>
-                      <p class="activities-item-description"> • +16 años • Aventura</p>
-                  </div>
-                  <div class="card-footer bg-white border-top-0">
-                      <a href="#" class="btn btn-reservar btn-lg w-100">Reservar ahora</a>
-                  </div>
-              </div>
-          </div>
+        <div class="mb-4">
+            <label for="categoriaSelect" class="form-label">Filtrar por categoría:</label>
+            <select class="form-select" id="categoriaSelect">
+                <option hidden selected>Categorias...</option>
+                <!--Hecho en js app.js-->
+            </select>
+        </div>
+
+
+    <div class="container my-5">
+        <div class="row" id="row_rating">
+
         </div>
     </div>
 
@@ -142,5 +63,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Actividades-App.js"></script>
 </body>
 </html>

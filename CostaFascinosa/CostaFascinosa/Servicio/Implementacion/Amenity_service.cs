@@ -10,6 +10,14 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Amenity_service : IAmenity_service
     {
+
+        private readonly IAmenity_repository _repository;
+
+        public Amenity_service(IAmenity_repository repository)
+        {
+            _repository = repository;
+        }
+
         public bool add(Amenity amenity)
         {
             throw new NotImplementedException();
@@ -22,7 +30,7 @@ namespace CostaFascinosa.Servicio.Implementacion
 
         public List<Amenity> GetAmenities()
         {
-            throw new NotImplementedException();
+            return _repository.GetAmenities();
         }
 
         public Amenity GetAmenity(int id)

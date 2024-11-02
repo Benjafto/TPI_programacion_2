@@ -7,11 +7,24 @@ using Microsoft.Extensions.Options;
 using CostaFascinosa.Repositorio.Implementacion;
 using CostaFascinosa.Repositorio.Interfaz;
 
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddDbContext<COSTA_FASCINOSAContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionDefault")));
+
+
+builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+{
+    builder.WithOrigins("*")
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+
+
+}));
+
 
 //INYECCIONES REPOSITORIOS
 builder.Services.AddScoped<ICategoria_repository, Categoria_repository>();
@@ -25,6 +38,10 @@ builder.Services.AddScoped<ITematica_repository, Tematica_repository>();
 builder.Services.AddScoped<ITiposProducto_repository, TiposProducto_repository>();
 builder.Services.AddScoped<ITiposServicio_repository, TiposServicio_repository>();
 builder.Services.AddScoped<IPasajero_repository, Pasajero_repository>();
+builder.Services.AddScoped<IActividade_repository, Actividade_repository>();
+builder.Services.AddScoped<IAmenity_repository, Amenity_repository>();
+
+
 
 //INYECCIONES SERVICIOS
 builder.Services.AddScoped<ICategoria_service, Categoria_service>();
@@ -37,7 +54,10 @@ builder.Services.AddScoped<IPreferenciaAlimenticia_service, PreferenciaAlimentic
 builder.Services.AddScoped<ITematica_service, Tematica_service>();
 builder.Services.AddScoped<ITiposProducto_service, TiposProducto_service>();
 builder.Services.AddScoped<ITiposServicio_service, TiposServicio_service>();
-builder.Services.AddScoped<IPasajero_service, Pasajero_service>();  
+builder.Services.AddScoped<IPasajero_service, Pasajero_service>();
+builder.Services.AddScoped<IActividade_service, Actividade_service>();
+builder.Services.AddScoped<IAmenity_service, Amenity_service>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -52,6 +72,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+
+app.UseCors("MyPolicy");
 
 app.UseHttpsRedirection();
 
