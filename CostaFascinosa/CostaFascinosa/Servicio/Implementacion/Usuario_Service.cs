@@ -10,29 +10,23 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class Usuario_Service : IUsuario_service
     {
-        public bool add(Usuario usuario)
+        private readonly IUsuario_repository _repository;
+
+        public Usuario_Service(IUsuario_repository repository)
         {
-            throw new NotImplementedException();
+            _repository = repository;
         }
 
-        public bool delete(int id)
+        public UserDTO? GetUsuario(int id)
         {
-            throw new NotImplementedException();
+            return  _repository.GetUsuario(id);
         }
 
-        public Usuario GetUsuario(int id)
+        public async Task<Usuario> GetUsername(string username)
         {
-            throw new NotImplementedException();
+            return await _repository.GetUsuario(username);
         }
 
-        public List<Usuario> GetUsuarios()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Usuario usuario)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

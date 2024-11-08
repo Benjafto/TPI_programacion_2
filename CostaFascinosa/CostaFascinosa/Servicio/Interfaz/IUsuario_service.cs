@@ -9,14 +9,7 @@ namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IUsuario_service
     {
-        List<Usuario> GetUsuarios();
-
-        Usuario GetUsuario(int id);
-
-        bool add(Usuario usuario);
-
-        bool delete(int id);
-
-        bool update(Usuario usuario);
+       UserDTO? GetUsuario(int id);
+       Task<Usuario> GetUsername(string username);
     }
 }

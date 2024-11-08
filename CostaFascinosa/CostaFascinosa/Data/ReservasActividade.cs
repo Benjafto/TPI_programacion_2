@@ -9,13 +9,11 @@ public partial class ReservasActividade
 {
     public int IdReservaAct { get; set; }
 
-    public int? IdUsuario { get; set; }
-
     public int? IdActividad { get; set; }
 
     public int? IdConsumo { get; set; }
 
-    public DateTime? Fecha { get; set; }
+    public DateTime? FechaReservada { get; set; }
 
     public int? CantidadReservada { get; set; }
 
@@ -24,6 +22,4 @@ public partial class ReservasActividade
     public virtual Actividade IdActividadNavigation { get; set; }
 
     public virtual ConsumosHabitacione IdConsumoNavigation { get; set; }
-
-    public virtual Usuario IdUsuarioNavigation { get; set; }
 }

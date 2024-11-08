@@ -21,8 +21,6 @@ builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
     builder.WithOrigins("*")
            .AllowAnyMethod()
            .AllowAnyHeader();
-
-
 }));
 
 
@@ -40,6 +38,7 @@ builder.Services.AddScoped<ITiposServicio_repository, TiposServicio_repository>(
 builder.Services.AddScoped<IPasajero_repository, Pasajero_repository>();
 builder.Services.AddScoped<IActividade_repository, Actividade_repository>();
 builder.Services.AddScoped<IAmenity_repository, Amenity_repository>();
+builder.Services.AddScoped<IUsuario_repository, Usuario_repository>();
 
 
 
@@ -57,6 +56,7 @@ builder.Services.AddScoped<ITiposServicio_service, TiposServicio_service>();
 builder.Services.AddScoped<IPasajero_service, Pasajero_service>();
 builder.Services.AddScoped<IActividade_service, Actividade_service>();
 builder.Services.AddScoped<IAmenity_service, Amenity_service>();
+builder.Services.AddScoped<IUsuario_service, Usuario_Service>();
 
 
 builder.Services.AddControllers();

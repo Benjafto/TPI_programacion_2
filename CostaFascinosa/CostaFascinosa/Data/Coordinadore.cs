@@ -17,6 +17,7 @@ public partial class Coordinadore
     public DateTime? FechaNac { get; set; }
 
     public int? Nacionalidad { get; set; }
+    
     [JsonIgnore]
     public virtual ICollection<Actividade> Actividades { get; set; } = new List<Actividade>();
 

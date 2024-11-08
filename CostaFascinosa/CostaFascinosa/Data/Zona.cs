@@ -13,7 +13,6 @@ public partial class Zona
     public string Descripcion { get; set; }
 
     public int? Piso { get; set; }
-    
     [JsonIgnore]
     public virtual ICollection<Actividade> Actividades { get; set; } = new List<Actividade>();
     [JsonIgnore]

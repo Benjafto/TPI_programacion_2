@@ -11,7 +11,13 @@ public partial class ConsumosHabitacione
 
     public int? NroHabitacion { get; set; }
 
+    public int? IdUsuario { get; set; }
+
+    public DateTime? Fecha { get; set; }
+
     public virtual ICollection<ConsumosGastronomico> ConsumosGastronomicos { get; set; } = new List<ConsumosGastronomico>();
+
+    public virtual Usuario IdUsuarioNavigation { get; set; }
 
     public virtual Habitacione NroHabitacionNavigation { get; set; }
 

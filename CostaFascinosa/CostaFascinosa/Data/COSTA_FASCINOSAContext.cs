@@ -210,12 +210,8 @@ public partial class COSTA_FASCINOSAContext : DbContext
 
             entity.Property(e => e.IdConsumoGastronomico).HasColumnName("id_consumo_gastronomico");
             entity.Property(e => e.Cantidad).HasColumnName("cantidad");
-            entity.Property(e => e.Fecha)
-                .HasColumnType("datetime")
-                .HasColumnName("fecha");
             entity.Property(e => e.IdConsumo).HasColumnName("id_consumo");
             entity.Property(e => e.IdProducto).HasColumnName("id_producto");
-            entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
             entity.Property(e => e.Precio)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("precio");
@@ -227,24 +223,28 @@ public partial class COSTA_FASCINOSAContext : DbContext
             entity.HasOne(d => d.IdProductoNavigation).WithMany(p => p.ConsumosGastronomicos)
                 .HasForeignKey(d => d.IdProducto)
                 .HasConstraintName("FK_CONSUMOS_GASTRONOMICOS_PRODUCTOS_GASTRONOMICOS");
-
-            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.ConsumosGastronomicos)
-                .HasForeignKey(d => d.IdUsuario)
-                .HasConstraintName("FK_CONSUMOS_GASTRONOMICOS_USUARIOS");
         });
 
         modelBuilder.Entity<ConsumosHabitacione>(entity =>
         {
-            entity.HasKey(e => e.IdConsumo).HasName("PK_CONSUMOS_ACT");
+            entity.HasKey(e => e.IdConsumo).HasName("PK_CONSUMOS_HAB");
 
             entity.ToTable("CONSUMOS_HABITACIONES");
 
             entity.Property(e => e.IdConsumo).HasColumnName("id_consumo");
+            entity.Property(e => e.Fecha)
+                .HasColumnType("datetime")
+                .HasColumnName("fecha");
+            entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
             entity.Property(e => e.NroHabitacion).HasColumnName("nro_habitacion");
+
+            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.ConsumosHabitaciones)
+                .HasForeignKey(d => d.IdUsuario)
+                .HasConstraintName("FK_CONS_USUARIO");
 
             entity.HasOne(d => d.NroHabitacionNavigation).WithMany(p => p.ConsumosHabitaciones)
                 .HasForeignKey(d => d.NroHabitacion)
-                .HasConstraintName("FK_CONSUMOS_ACT_HAB");
+                .HasConstraintName("FK_CONS_HAB");
         });
 
         modelBuilder.Entity<Contacto>(entity =>
@@ -544,24 +544,19 @@ public partial class COSTA_FASCINOSAContext : DbContext
             entity.Property(e => e.CostoUnitario)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("costo_unitario");
-            entity.Property(e => e.Fecha)
+            entity.Property(e => e.FechaReservada)
                 .HasColumnType("datetime")
-                .HasColumnName("fecha");
+                .HasColumnName("fecha_reservada");
             entity.Property(e => e.IdActividad).HasColumnName("id_actividad");
             entity.Property(e => e.IdConsumo).HasColumnName("id_consumo");
-            entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
 
             entity.HasOne(d => d.IdActividadNavigation).WithMany(p => p.ReservasActividades)
                 .HasForeignKey(d => d.IdActividad)
-                .HasConstraintName("FK_RESERVAS_ACTIVIDADES_ACTIVIDADES");
+                .HasConstraintName("FK_RESERVAS_ACT_ACT");
 
             entity.HasOne(d => d.IdConsumoNavigation).WithMany(p => p.ReservasActividades)
                 .HasForeignKey(d => d.IdConsumo)
-                .HasConstraintName("FK_RESERVAS_ACTIVIDADES_CONSUMOS_HABITACIONES");
-
-            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.ReservasActividades)
-                .HasForeignKey(d => d.IdUsuario)
-                .HasConstraintName("FK_RESERVAS_ACTIVIDADES_USUARIOS");
+                .HasConstraintName("FK_RESERVAS_ACT_CONS");
         });
 
         modelBuilder.Entity<ReservasServicio>(entity =>

@@ -2,7 +2,6 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.JavaScript;
 using System.Text.Json.Serialization;
 
 namespace CostaFascinosa.Data;

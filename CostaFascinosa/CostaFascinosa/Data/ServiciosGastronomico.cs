@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CostaFascinosa.Data;
 
@@ -46,10 +47,10 @@ public partial class ServiciosGastronomico
     public virtual Turno IdTurnoAperturaNavigation { get; set; }
 
     public virtual Zona IdZonaNavigation { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<ProductosGastronomico> ProductosGastronomicos { get; set; } = new List<ProductosGastronomico>();
-
+    [JsonIgnore]
     public virtual ICollection<ResenasServicio> ResenasServicios { get; set; } = new List<ResenasServicio>();
-
+    [JsonIgnore]
     public virtual ICollection<ReservasServicio> ReservasServicios { get; set; } = new List<ReservasServicio>();
 }

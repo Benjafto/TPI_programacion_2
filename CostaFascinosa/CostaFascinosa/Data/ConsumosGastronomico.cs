@@ -11,19 +11,13 @@ public partial class ConsumosGastronomico
 
     public int? IdConsumo { get; set; }
 
-    public int? IdUsuario { get; set; }
-
     public int? IdProducto { get; set; }
 
     public int? Cantidad { get; set; }
 
     public decimal? Precio { get; set; }
 
-    public DateTime? Fecha { get; set; }
-
     public virtual ConsumosHabitacione IdConsumoNavigation { get; set; }
 
     public virtual ProductosGastronomico IdProductoNavigation { get; set; }
-
-    public virtual Usuario IdUsuarioNavigation { get; set; }
 }

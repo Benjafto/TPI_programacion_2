@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CostaFascinosa.Data;
 
@@ -14,18 +15,17 @@ public partial class Usuario
     public int? Contraseña { get; set; }
 
     public int? IdPasajero { get; set; }
-
-    public virtual ICollection<ConsumosGastronomico> ConsumosGastronomicos { get; set; } = new List<ConsumosGastronomico>();
+    [JsonIgnore]
+    public virtual ICollection<ConsumosHabitacione> ConsumosHabitaciones { get; set; } = new List<ConsumosHabitacione>();
 
     public virtual Pasajero IdPasajeroNavigation { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<ResenasActividade> ResenasActividades { get; set; } = new List<ResenasActividade>();
-
+    [JsonIgnore]
     public virtual ICollection<ResenasAmenity> ResenasAmenities { get; set; } = new List<ResenasAmenity>();
-
+    [JsonIgnore]
     public virtual ICollection<ResenasServicio> ResenasServicios { get; set; } = new List<ResenasServicio>();
-
-    public virtual ICollection<ReservasActividade> ReservasActividades { get; set; } = new List<ReservasActividade>();
-
+    [JsonIgnore]
     public virtual ICollection<ReservasServicio> ReservasServicios { get; set; } = new List<ReservasServicio>();
 }

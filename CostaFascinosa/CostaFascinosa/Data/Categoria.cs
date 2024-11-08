@@ -14,7 +14,6 @@ public partial class Categoria
 
     [JsonIgnore]
     public virtual ICollection<Actividade> Actividades { get; set; } = new List<Actividade>();
-
     [JsonIgnore]
     public virtual ICollection<Amenity> Amenities { get; set; } = new List<Amenity>();
 }

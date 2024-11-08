@@ -1,5 +1,6 @@
 ﻿using CostaFascinosa.Data;
 using CostaFascinosa.Servicio.Interfaz;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,27 +18,35 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context = context;
         }
 
-        public bool add(Usuario usuario)
+        public  UserDTO? GetUsuario(int id)
         {
-            throw new NotImplementedException();
+            var usuario = _context.Usuarios
+                                .Where(x => x.IdUsuario == id)
+                                .Select(x => new UserDTO
+                                {
+                                    
+                                    UserName = x.Nombre,
+                                    Nombre = x.IdPasajeroNavigation.Nombre,
+                                    Apellido = x.IdPasajeroNavigation.Apellido,
+                                    NroHabitacion = x.IdPasajeroNavigation.NroHabitacion,
+                                    ZonaHab = x.IdPasajeroNavigation.NroHabitacionNavigation.IdZonaNavigation.Descripcion,
+                                    EstadoUser = x.IdPasajeroNavigation.IdEstadoNavigation.Descripcion,
+                                    fech_abordo = x.IdPasajeroNavigation.FechaAbordo,
+                                    fech_desbordo = x.IdPasajeroNavigation.FechaDesbordo
+
+                                })
+                                .FirstOrDefault(); 
+
+            return usuario;
         }
 
-        public bool delete(int id)
+        public async Task<Usuario> GetUsuario(string username)
         {
-            throw new NotImplementedException();
+            var user = await _context.Usuarios.FirstOrDefaultAsync(x => x.Nombre.Equals(username));
+            return user;
         }
 
-        public Usuario GetUsuario(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Usuario> GetUsuarios()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Usuario usuario)
+        public Task<bool> UpdateUsuario(Usuario usuario)
         {
             throw new NotImplementedException();
         }
