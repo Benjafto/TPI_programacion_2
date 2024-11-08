@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace CostaFascinosa.Data;
@@ -11,7 +12,7 @@ public partial class Usuario
     public int IdUsuario { get; set; }
 
     public string Nombre { get; set; }
-
+   
     public int? Contraseña { get; set; }
 
     public int? IdPasajero { get; set; }

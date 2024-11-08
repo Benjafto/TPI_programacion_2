@@ -27,6 +27,9 @@ namespace CostaFascinosa.Servicio.Implementacion
             return await _repository.GetUsuario(username);
         }
 
-       
+        public async Task<bool> UpdatePassword(int idUsuario, int contraseña)
+        {
+            return await _repository.UpdateUsuario(idUsuario, contraseña);
+        }
     }
 }
