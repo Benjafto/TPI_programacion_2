@@ -10,21 +10,9 @@ namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IActividade_repository
     {
-        List<Actividade> GetActividades();
+        Task<List<Actividade>> GetActividades();
 
-        Actividade GetActividad(int id);
-        bool add(Actividade actividad);
-
-        bool update(Actividade actividad);
-
-        bool delete(int id);
-
-        List<Actividade> GetActividadesByCategoria(int id);
-        List<Actividade> GetActividadesByTurno(int id);
-        List<Actividade> GetActividadesByDestinatario(int id);
-        List<Actividade> GetActividadesByCodigoVestimenta(int id);
-        List<Actividade> GetActividadesByZona(int id);
-        List<Actividade> GetActividadesByRequiereReserva(bool requiereReserva);
+        Task<List<Actividade>> GetActividad(string nombre);
 
     }
 }

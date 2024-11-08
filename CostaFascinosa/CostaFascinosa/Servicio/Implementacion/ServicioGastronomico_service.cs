@@ -10,29 +10,16 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class ServicioGastronomico_service : IServicioGastronomico_service
     {
-        public bool add(ServiciosGastronomico servicioGastronomico)
+        private readonly IServicioGastronomico_repository _repo;
+
+        public ServicioGastronomico_service(IServicioGastronomico_repository repo)
         {
-            throw new NotImplementedException();
+            _repo = repo;
         }
 
-        public bool delete(int id)
+        public async Task<List<ServiciosGastronomico>> GetServiciosGastronomicos()
         {
-            throw new NotImplementedException();
-        }
-
-        public ServiciosGastronomico GetServicioGastronomico(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ServiciosGastronomico> GetServiciosGastronomicos()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(ServiciosGastronomico servicioGastronomico)
-        {
-            throw new NotImplementedException();
+            return await _repo.GetServiciosGastronomicos();
         }
     }
 }

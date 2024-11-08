@@ -10,29 +10,16 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class ProductosGastronomico_service : IProductosGastronomico_service
     {
-        public bool add(ProductosGastronomico productoGastronomico)
+        private readonly IProductosGastronomico_repository _repository;
+
+        public ProductosGastronomico_service(IProductosGastronomico_repository repository)
         {
-            throw new NotImplementedException();
+            _repository = repository;
         }
 
-        public bool delete(int id)
+        public async Task<List<ProductosGastronomico>> GetProductosGastronomicos()
         {
-            throw new NotImplementedException();
-        }
-
-        public ProductosGastronomico GetProductoGastronomico(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ProductosGastronomico> GetProductosGastronomicos()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(ProductosGastronomico productoGastronomico)
-        {
-            throw new NotImplementedException();
+            return await _repository.GetProductosGastronomico();
         }
     }
 }

@@ -9,13 +9,9 @@ namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IAmenity_service
     {
-        List<Amenity> GetAmenities();
+        Task<List<Amenity>> GetAmenities();
 
-        Amenity GetAmenity(int id);
-        bool add(Amenity amenity);
-
-        bool update(Amenity amenity);
-
-        bool delete(int id);
+        Task<List<Amenity>> GetAmenity(string nombre);
+        
     }
 }

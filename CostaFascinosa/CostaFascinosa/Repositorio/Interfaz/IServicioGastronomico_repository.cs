@@ -9,14 +9,6 @@ namespace CostaFascinosa.Servicio.Interfaz
 {
     public interface IServicioGastronomico_repository
     {
-        List<ServiciosGastronomico> GetServiciosGastronomicos();
-
-        ServiciosGastronomico GetServicioGastronomico(int id);
-
-        bool add(ServiciosGastronomico servicioGastronomico);
-
-        bool delete(int id);
-
-        bool update(ServiciosGastronomico servicioGastronomico);
+        Task<List<ServiciosGastronomico>> GetServiciosGastronomicos();
     }
 }
