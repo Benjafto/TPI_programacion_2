@@ -1,0 +1,183 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Tipografía y colores */
+  body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+  }
+  
+  .header-area {
+    background-color: #003366;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-section {
+    background: url('../img/banner.jpg') center/cover no-repeat;
+    padding: 3rem 1rem;
+  }
+  
+  .card-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espacio entre tarjetas */
+    padding: 0 15px;
+  }
+  
+  .card {
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    max-width: 600px; /* Limita el tamaño máximo en pantallas grandes */
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    padding: 20px; /* Más espacio dentro de la tarjeta */
+  }
+  
+  .card-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+  }
+
+  .card img {
+    width: 100%;
+    height: 250px; /* Altura fija para las imágenes */
+    object-fit: cover;
+    display: block;
+  }
+  
+  .card-title {
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+    font-weight: 700;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  
+  footer {
+    background-color: #003366;
+    color: white;
+  }
+  
+  /* Estilos "Mobile First" */
+  @media (min-width: 576px) {
+    .hero-section {
+      padding: 5rem 2rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+  
+
+
+  /*LO QUE HIZO COTI
+  body {
+    font-family:'Raleway', Times, serif;
+    color: #000000;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:#f7921e;
+    font-weight: 600;
+    font-family: 'Raleway';
+}
+
+
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.header-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    border-radius: 50px;
+}
+
+.header-area .container h1{
+    text-align: center;
+    font-size:large;
+    font-family: 'FuenteBreathing';
+    color: #f7921e;
+}
+.navbar-nav .nav-link {
+    color: #232323;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #f7921e;
+}
+
+.hero-section {
+    background: url(/images/Fondo.png); 
+    background-color: #66645f;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+.nosotros-section {
+    padding: 100px 0;
+}
+
+.nosotros-section h2 {
+    margin-top: 15px;
+    font-family: 'FuenteBreathing';
+   text-align: left;
+}*/

@@ -16,8 +16,20 @@ a
     font-size: inherit;
 }
 
+body{
+    background-color: #033E51;
+    width: 100%; 
+    height: 60vh;
+}
 
-/* Inicio + Login */
+.logo {
+    
+    width: 25%;
+    border-radius: 20px; 
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); 
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); 
+}
+
 .wave-text-container {
     text-align: center;
     margin-top: 50px;
@@ -67,19 +79,9 @@ a
 .wave-text span:nth-child(20) { animation-delay: 1.9s; }
 
 
-.login-box {
-    background-color: #033E51;
-    width: 100%; 
-    height: 100%;
-}
-
-.logo {
-    width: 50%;
-}
-
 .brand-name {
     font-family: 'FuenteBreathing', sans-serif;
-    font-size: 2rem;
+    font-size: 2.7rem;
     color: #cb8f14; 
     letter-spacing: 5px;
 }
@@ -93,72 +95,28 @@ a
     margin-bottom: 1rem;
 }
 
-
-.form-control {
-    background-color:#ebefe8; 
-    border: none;
-    padding: 0.4rem;
-    border-radius: 50px;
-    font-family: Raleway;
-    font-size: 0.9rem;
-    padding-left: 15px;
-}
-
-.remember-container{
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    margin-bottom: 15px;
-    color: #ebefe8;
-    font-size: 0.7rem;
-    font-family: Raleway;
-    cursor: pointer;
-}
-
-.custom-checkbox input[type="checkbox"] 
+.btn-submit
 {
-    display: none;
-}
-
-.custom-checkbox .checkmark 
-{
-    width: 10px;
-    height: 10px;
-    background-color: #ebefe8;
-    border-radius: 10px;
-    display: inline-block;
-    vertical-align: baseline;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.custom-checkbox input[type="checkbox"]:checked + .checkmark 
-{
-    background-color:#66645f;
-}
-
-.btn-submit, .btn-reservar
-{
+    width: 10%;
     background-color: #cb8f14;
     border-radius: 25px;
     box-shadow: 0px 4px 4px #66645f;
     font-family: Raleway;
-    font-size: 1rem;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-size: 1.1rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
     border-color: #cb8f14;
     color:#ebefe8;
 }
 
-.btn-submit :focus, .btn-reservar
+.btn-submit :focus
 {
     background-color: #cb8f14;
     box-shadow: none;
     outline: none;
 }
 
-.btn-submit :hover, .btn-reservar
+.btn-submit :hover
 {
     background-color: #cb8f14;
     box-shadow: none;
@@ -166,246 +124,106 @@ a
 
 }
 
-.btn-submit :active, .btn-reservar
+.btn-submit :active
 {
     background-color: #cb8f14;
     box-shadow: none;
 }
+
 
 .small
 {
     font-family: Raleway;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: #7d7e7c;
-}
-
-
-/* Página principal */
-
-body {
-    font-family:'Raleway', Times, serif;
-    color: #000000;
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color:#f7921e;
-    font-weight: 600;
-    font-family: 'Raleway';
+    padding-top: 40px;
 }
 
 
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 36px;
-}
-
-.header-area {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.navbar-brand img {
-    max-height: 50px;
-    border-radius: 50px;
-}
-
-.header-area .container h1{
-    text-align: center;
-    font-size:large;
-    font-family: 'FuenteBreathing';
-    color: #f7921e;
-}
-.navbar-nav .nav-link {
-    color: #232323;
-    font-weight: 500;
-    padding: 10px 15px;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: #f7921e;
-}
-
-.hero-section {
-    background: url(/images/Fondo.png); /*Poner imagen bonita de crucero*/
-    background-color: #66645f;
-    background-size: cover;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    color: #fff;
-}
-
-.hero-section h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero-section p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
 
 
-.nosotros-section {
-    padding: 100px 0;
-}
-
-.nosotros-section h2 {
-    margin-top: 15px;
-    font-family: 'FuenteBreathing';
-   text-align: left;
-}
-
-/*actividades*/
-
-.activities-item-rating {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.activities-item-price {
-    font-weight: bold;
-    color: #cb8f14;
-    margin-bottom: 10px;
-}
-.stars {
-    color: #f7921e;
-    margin-right: 5px;
-}
-.rating {
-    font-size: 14px;
-    color: #666;
-}
-.card img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hero h1{
-   font-family: 'Raleway'; 
-   text-align: center;
-}
-.activities-item-description {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
-}
 
 
 
 /* Media Query para pantallas pequeñas (teléfonos) */
 @media (max-width: 767px) {
-    /* Ajustes en el header */
-    .header-area .container h1 {
-        font-size: medium;
-        text-align: center;
-    }
-    .navbar-brand img {
-        max-height: 40px;
-    }
-    .navbar-nav .nav-link {
-        padding: 8px 10px;
-        font-size: 14px;
+    
+    body{
+      display: flex;
+      flex-direction: column;
+      justify-content:space-between ;
+      height: 90vh;
     }
     
-    /* Hero Section */
-    .hero-section {
-        height: 300px;
-        padding: 20px;
-        text-align: center;
+    .logo {
+        width: 50%;
+        margin-top: 20px;
     }
-    .hero-section h1 {
-        font-size: 32px;
-        margin-bottom: 15px;
+    
+    .brand-name {
+        font-size: 1.7rem;
+        letter-spacing: 5px;
     }
-    .hero-section p {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-
-    /* Sección 'Nosotros' */
-    .nosotros-section {
-        padding: 50px 20px;
-    }
-    .nosotros-section h2 {
-        font-size: 24px;
-    }
-    .nosotros-section p {
-        font-size: 14px;
-    }
-    .nosotros-section img {
-        max-width: 100%;
-        margin-bottom: 20px;
+    
+    
+    .tagline {
+        font-size: 0.95rem;
+        color: #ebefe8;
+        margin-bottom: 1rem;
     }
 
-    /* Texto de las actividades */
-    .activities-item-rating,
-    .activities-item-price,
-    .activities-item-description {
-        font-size: 14px;
-        margin-bottom: 5px;
+    .orientacion{
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
     }
-
-    /* Botones */
-    .btn-submit, .btn-reservar {
+    
+    .btn-submit
+    {
+        width: 50%;
+        background-color: #cb8f14;
+        border-radius: 25px;
+        box-shadow: 0px 4px 4px #66645f;
+        font-family: Raleway;
         font-size: 0.9rem;
-        padding: 10px 15px;
-    }
-
-    /* Footer */
-    footer p {
-        font-size: 14px;
-    }
-}
-
-/* Media Query para pantallas medianas (tablets) */
-@media (min-width: 768px) and (max-width: 991px) {
-    /* Ajustes en el header */
-    .header-area .container h1 {
-        font-size: large;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-color: #cb8f14;
+        color:#ebefe8;
     }
     
-    .navbar-nav .nav-link {
-        padding: 8px 12px;
-    }
-
-    /* Hero Section */
-    .hero-section {
-        height: 400px;
-    }
-    .hero-section h1 {
-        font-size: 36px;
-    }
-    .hero-section p {
-        font-size: 16px;
-    }
-
-    /* Sección 'Nosotros' */
-    .nosotros-section {
-        padding: 75px 30px;
-    }
-    .nosotros-section h2 {
-        font-size: 28px;
-    }
-
-    /* Actividades */
-    .activities-item-rating,
-    .activities-item-price,
-    .activities-item-description {
-        font-size: 15px;
+    .btn-submit :focus
+    {
+        background-color: #cb8f14;
+        box-shadow: none;
+        outline: none;
     }
     
-    /* Footer */
-    footer p {
-        font-size: 15px;
+    .btn-submit :hover
+    {
+        background-color: #cb8f14;
+        box-shadow: none;
+        font-weight: 600;
+    
     }
+    
+    .btn-submit :active
+    {
+        background-color: #cb8f14;
+        box-shadow: none;
+    }
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .small
+    {
+        font-family: Raleway;
+        font-size: 0.7rem;
+        color: #7d7e7c;
+        padding-top: 40px;
+    }   
 }

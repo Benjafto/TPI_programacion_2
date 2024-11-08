@@ -1,0 +1,55 @@
+/* styles.css */
+*{
+    padding: 0;
+    margin: 0;
+}
+/* Ajusta el margen de la cabecera para dispositivos pequeños */
+.header-area {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Centra y ajusta el espaciado de elementos principales */
+.main-content {
+    padding: 1rem;
+}
+
+/* Logo y título ajustados para vista móvil */
+.navbar .navbar-brand .logo {
+    max-width: 60px;
+    margin-right: 0.5rem;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+}
+
+.brand-name {
+    font-size: 2rem;
+}
+
+/* Botón personalizado de regreso */
+.btn-submit {
+    background-color: #cb8f14;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 0.6rem 1.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.table-responsive {
+    margin-top: 1.5rem;
+}
+
+/* Ajustes generales de margenes y espaciado para dispositivos pequeños */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .table th, .table td {
+        padding: 0.5rem;
+    }
+}

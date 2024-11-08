@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Perfil - Costa Fascinosa</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="miPerfil-styles.css">
+</head>
+<body>
+  <header class="header-area bg-primary py-3">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/TPI_FRONT/pages/principal.html">
+          <img src="/img/Logo.png" alt="Logo" width="40" class="me-2" />
+          <span class="fw-bold">Costa Fascinosa</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="/pages/principal/principal.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/Actividades/actividades.html">Actividades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/Amenities/amenities.html">Amenities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/ServiciosGastronomicos/serviciosGastronomicos.html">Experiencias Gastronomicas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/misReservas/misReservas.html">Mis reservas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/misConsumos/misConsumos.html">Mis consumos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/misReseñas/misReseñas.html">Mis reseñas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/miPerfil/miPerfil.html">Mi Perfil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/TPI_FRONT/index.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/acercaDe/acercaDe.html">Acerca De</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold">Mi Perfil</h2>
+      <p class="text-muted">Aquí puedes ver y editar tu información personal</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center mb-4">
+        <img
+          src="/TPI_FRONT/img/perfil.jpg"
+          alt="Foto de perfil"
+          class="rounded-circle img-fluid shadow"
+          style="width: 150px; height: 150px;"
+        />
+        <h3 class="mt-3">Nombre de Usuario</h3>
+        <p class="text-muted">Usuario desde 2023</p>
+      </div>
+      <div class="col-md-8">
+        <div class="card shadow p-4">
+          <h4 class="fw-bold">Información Personal</h4>
+          <p><strong>Email:</strong> usuario@correo.com</p>
+          <p><strong>Teléfono:</strong> +123 456 7890</p>
+          <p><strong>Dirección:</strong> Calle Falsa 123</p>
+          <h4 class="mt-4 fw-bold">Preferencias</h4>
+          <p><strong>Intereses:</strong> Cruceros, Actividades al aire libre, Comedia</p>
+          <p><strong>Paquetes adquiridos:</strong> Paquete Completo, Paquete Base</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 text-center">
+      <a href="#" class="btn btn-primary me-2 shadow-sm">Editar Perfil</a>
+      <a href="#" class="btn btn-outline-secondary shadow-sm">Historial de Reservas</a>
+    </div>
+  </main>
+
+  <footer class="bg-primary text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2024 Costa Fascinosa. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

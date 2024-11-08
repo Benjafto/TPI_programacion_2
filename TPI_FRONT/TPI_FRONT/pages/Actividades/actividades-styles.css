@@ -1,0 +1,242 @@
+/* General */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f4f6f8;
+}
+
+.header-area {
+    background-color: #004080;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar-brand img {
+    width: 50px;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-left: 0.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: #eaeaea;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffc107; /* Dorado suave para el link activo */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml, ... "); /* icono personalizado si quieres */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    min-height: 100%;
+}
+
+.hero .container {
+    position: relative;
+    padding: 8rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Cards Section */
+.card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.activities-item-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.activities-item-description {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.activities-item-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.activities-item-rating .stars {
+    color: #ffc107; /* Dorado suave para las estrellas */
+    margin-right: 0.25rem;
+}
+
+.card-footer {
+    background-color: #f4f6f8;
+    border-top: none;
+}
+
+/* Botones */
+.btn-reservar {
+    background-color: #0056a3;
+    border-color: #0056a3;
+    color: white;
+    font-weight: 500;
+    border-radius: 0.5rem;
+}
+
+.btn-reservar:hover {
+    background-color: #004080;
+    color: white;
+}
+
+.btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    background-color: #004080;
+    color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero .container {
+        padding: 12rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .container .text-muted {
+        font-size: 0.85rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .activities-item-rating,
+    .activities-item-price,
+    .activities-item-description {
+        font-size: 15px;
+    }
+
+    
+    /* Botones */
+    .btn-submit, .btn-reservar {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+  /* Ajustes en el header */
+  .header-area .container h1 {
+    font-size: medium;
+    text-align: center;
+}
+.navbar-brand img {
+    max-height: 40px;
+}
+.navbar-nav .nav-link {
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 300px;
+    padding: 20px;
+    text-align: center;
+}
+.hero-section h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.hero-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+}
+
+

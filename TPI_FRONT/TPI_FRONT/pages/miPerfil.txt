@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mi Perfil</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/TPI_FRONT/styles.css" />
+	</head>
+	<body>
+		<header class="header-area">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<a class="navbar-brand" href="/TPI_FRONT/pages/principal.html">
+						<img src="/img/Logo.png" alt="Logo" />
+					</a>
+					<h1>Costa Fascinosa</h1>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="/TPI_FRONT/pages/principal.html"
+									>Inicio</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/TPI_FRONT/pages/actividades.html"
+									>Actividades</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" href="/TPI_FRONT/pages/miPerfil.html"
+									>Mi Perfil</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/TPI_FRONT/pages/index.html">Login</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<div class="container my-5">
+			<h2 class="text-center mb-4">Mi Perfil</h2>
+			<div class="row">
+				<div class="col-md-4 text-center">
+					<img
+						src="/TPI_FRONT/img/perfil.jpg"
+						alt="Foto de perfil"
+						class="rounded-circle img-fluid"
+						style="width: 150px"
+					/>
+					<h3 class="mt-3">Nombre de Usuario</h3>
+					<p class="text-muted">Usuario desde 2023</p>
+				</div>
+				<div class="col-md-8">
+					<h4>Información Personal</h4>
+					<p><strong>Email:</strong></p>
+					<p><strong>Teléfono:</strong></p>
+					<p><strong>Dirección:</strong></p>
+					<h4 class="mt-4">Preferencias</h4>
+					<p>
+						<strong>Intereses:</strong> Cruceros, Actividades al aire libre,
+						Comedia
+					</p>
+					<p>
+						<strong>Paquetes adquiridos:</strong> Paquete Completo, Paquete Base
+					</p>
+				</div>
+			</div>
+			<div class="mt-5 text-center">
+				<a href="#" class="btn btn-primary">Editar Perfil</a>
+				<a href="#" class="btn btn-secondary">Historial de Reservas</a>
+			</div>
+		</div>
+
+		<footer class="bg-dark text-white text-center py-3 mt-5">
+			<p>&copy; 2024 Costa Fascinosa. Todos los derechos reservados.</p>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

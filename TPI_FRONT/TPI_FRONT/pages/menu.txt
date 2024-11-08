@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Costa Fascinosa - Menú de Restaurantes</title>
+</head>
+
+<body class="container-fluid login-box">
+  <header class="header-area mb-4">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../pages/principal.html">
+          <img src="../img/Logo.png" alt="Logo" style="width: 100px; height: auto;">
+        </a>
+        <h1>Costa Fascinosa</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="/TPI_FRONT/pages/principal.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="/TPI_FRONT/pages/actividades.html">Actividades</a></li>
+            <li class="nav-item"><a class="nav-link" href="/TPI_FRONT/pages/miPerfil.html">Mi Perfil</a></li>
+            <li class="nav-item"><a class="nav-link" href="/TPI_FRONT/index.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+   
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex flex-column align-items-center mt-5">
+        <img src="./img/Logo.png" alt="Costa Fascinosa" class="logo mb-4">
+        <h1 class="brand-name text-primary">Costa Fascinosa</h1>
+        <h2 class="tagline text-secondary">Menú de Restaurantes</h2>
+        <p class="text-center mb-4 text-muted">Explora la variedad de platos que cada restaurante ofrece en nuestro crucero.</p>
+
+        <!-- Menú de Restaurantes -->
+        <form id="orderForm" class="w-75">
+          <div class="accordion" id="restaurantMenuAccordion">
+
+            <!-- Restaurante 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="restaurant1Heading">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#restaurant1Menu" aria-expanded="true" aria-controls="restaurant1Menu">
+                  Restaurante La Brisa
+                </button>
+              </h2>
+              <div id="restaurant1Menu" class="accordion-collapse collapse show" aria-labelledby="restaurant1Heading" data-bs-parent="#restaurantMenuAccordion">
+                <div class="accordion-body">
+                  <ul>
+                    <li class="mb-3 d-flex align-items-center justify-content-between">
+                      <input type="checkbox" id="cesar" name="plato" value="12">
+                      <label for="cesar" class="me-auto"><strong>Ensalada César</strong> - Lechuga fresca, crutones y aderezo César <span class="text-primary fs-5">$12</span></label>
+                      <input type="number" class="form-control text-center ms-3 w-25" id="cantidad-cesar" name="cantidad-cesar" min="1" max="10" value="1" disabled>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center justify-content-between">
+                      <input type="checkbox" id="paella" name="plato" value="25">
+                      <label for="paella" class="me-auto"><strong>Paella de Mariscos</strong> - Arroz, camarones, mejillones y calamares <span class="text-primary fs-5">$25</span></label>
+                      <input type="number" class="form-control text-center ms-3 w-25" id="cantidad-paella" name="cantidad-paella" min="1" max="10" value="1" disabled>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center justify-content-between">
+                      <input type="checkbox" id="flan" name="plato" value="8">
+                      <label for="flan" class="me-auto"><strong>Flan de Coco</strong> - Postre de coco con caramelo <span class="text-primary fs-5">$8</span></label>
+                      <input type="number" class="form-control text-center ms-3 w-25" id="cantidad-flan" name="cantidad-flan" min="1" max="10" value="1" disabled>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Restaurante 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="restaurant2Heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#restaurant2Menu" aria-expanded="false" aria-controls="restaurant2Menu">
+                  Restaurante La Vela
+                </button>
+              </h2>
+              <div id="restaurant2Menu" class="accordion-collapse collapse" aria-labelledby="restaurant2Heading" data-bs-parent="#restaurantMenuAccordion">
+                <div class="accordion-body">
+                  <ul>
+                    <li class="mb-3 d-flex align-items-center justify-content-between">
+                      <input type="checkbox" id="ravioles" name="plato" value="18">
+                      <label for="ravioles" class="me-auto"><strong>Ravioles de Espinaca</strong> - Pasta fresca rellena de espinaca y ricotta <span class="text-primary fs-5">$18</span></label>
+                      <input type="number" class="form-control text-center ms-3 w-25" id="cantidad-ravioles" name="cantidad-ravioles" min="1" max="10" value="1" disabled>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center justify-content-between">
+                      <input type="checkbox" id="filete" name="plato" value="30">
+                      <label for="filete" class="me-auto"><strong>Filete Mignon</strong> - Filete a la parrilla con salsa de vino tinto <span class="text-primary fs-5">$30</span></label>
+                      <input type="number" class="form-control text-center ms-3 w-25" id="cantidad-filete" name="cantidad-filete" min="1" max="10" value="1" disabled>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center justify-content-between">
+                      <input type="checkbox" id="tiramisu" name="plato" value="10">
+                      <label for="tiramisu" class="me-auto"><strong>Tiramisú</strong> - Clásico postre italiano <span class="text-primary fs-5">$10</span></label>
+                      <input type="number" class="form-control text-center ms-3 w-25" id="cantidad-tiramisu" name="cantidad-tiramisu" min="1" max="10" value="1" disabled>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Restaurante 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="restaurant3Heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#restaurant3Menu" aria-expanded="false" aria-controls="restaurant3Menu">
+                  Restaurante El Mar
+                </button>
+              </h2>
+              <div id="restaurant3Menu" class="accordion-collapse collapse" aria-labelledby="restaurant3Heading" data-bs-parent="#restaurantMenuAccordion">
+                <div class="accordion-body">
+                  <ul>
+                    <li class="mb-3 d-flex align-items-center justify-content-between">
+                      <input type="checkbox" id="ceviche" name="plato" value="20">
+                      <label for="ceviche" class="me-auto"><strong>Ceviche Mixto</strong> - Pescado fresco y mariscos marinados <span class="text-primary fs-5">$20</span></label>
+                      <input type="number" class="form-control text-center ms-3 w-25" id="cantidad-ceviche" name="cantidad-ceviche" min="1" max="10" value="1" disabled>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center justify-content-between">
+                      <input type="checkbox" id="salmon" name="plato" value="28">
+                      <label for="salmon" class="me-auto"><strong>Salmón a la Parrilla</strong> - Servido con espárragos y limón <span class="text-primary fs-5">$28</span></label>
+                      <input type="number" class="form-control text-center ms-3 w-25" id="cantidad-salmon" name="cantidad-salmon" min="1" max="10" value="1" disabled>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center justify-content-between">
+                      <input type="checkbox" id="mousse" name="plato" value="9">
+                      <label for="mousse" class="me-auto"><strong>Mousse de Chocolate</strong> - Postre suave y cremoso de chocolate <span class="text-primary fs-5">$9</span></label>
+                      <input type="number" class="form-control text-center ms-3 w-25" id="cantidad-mousse" name="cantidad-mousse" min="1" max="10" value="1" disabled>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón para enviar pedido -->
+          <div class="mt-4">
+            <p><strong>Total del Pedido: $<span id="total">0</span></strong></p>
+            <button type="submit" class="btn btn-primary w-100">Pedir Comida</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="col-12 mt-5 text-center">
+    <p class="small mb-1 text-secondary"> &copy; 2024 Costa Fascinosa</p>
+    <p class="small mt-1 text-secondary">Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const totalElement = document.getElementById('total');
+
+    // Actualiza el total al cambiar el checkbox o el contador
+    function updateTotal() {
+      let total = 0;
+      checkboxes.forEach(checkbox => {
+        const quantityInput = document.getElementById('cantidad-' + checkbox.id);
+        if (checkbox.checked) {
+          const price = parseFloat(checkbox.value);
+          const quantity = parseInt(quantityInput.value);
+          total += price * quantity;
+        }
+      });
+      totalElement.textContent = total.toFixed(2);
+    }
+
+    // Habilita o deshabilita el campo de cantidad basado en el estado del checkbox
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        const quantityInput = document.getElementById('cantidad-' + checkbox.id);
+        quantityInput.disabled = !checkbox.checked;
+        updateTotal();
+      });
+    });
+
+    // Actualiza el total al cambiar la cantidad
+    document.querySelectorAll('input[type="number"]').forEach(quantityInput => {
+      quantityInput.addEventListener('input', updateTotal);
+    });
+  </script>
+</body>
+
+</html>
+
