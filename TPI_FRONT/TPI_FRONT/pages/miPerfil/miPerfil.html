@@ -33,38 +33,34 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item"><a class="nav-link" href="/pages/principal/principal.html">Inicio</a></li>
+
             <li class="nav-item">
-                <a class="nav-link active" href="/pages/principal/principal.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/Actividades/actividades.html">Actividades</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/Amenities/amenities.html">Amenities</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/ServiciosGastronomicos/serviciosGastronomicos.html">Experiencias Gastronomicas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/misReservas/misReservas.html">Mis reservas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/misConsumos/misConsumos.html">Mis consumos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/misReseñas/misReseñas.html">Mis reseñas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/miPerfil/miPerfil.html">Mi Perfil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/TPI_FRONT/index.html">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/acercaDe/acercaDe.html">Acerca De</a>
-              </li>
+              <a class="nav-link" href="../Actividades/actividades.html">Actividades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/Amenities/amenities.html">Amenities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/ServiciosGastronomicos/serviciosGastronomicos.html">Experiencias Gastronomicas</a>
+            </li>
+            <!-- Dropdown menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Más Opciones
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/pages/misReservas/misReservas.html">Mis Reservas</a></li>
+                <li><a class="dropdown-item" href="/pages/misConsumos/misConsumos.html">Mis Consumos</a></li>
+                <li><a class="dropdown-item" href="/pages/misReseñas/misReseñas.html">Mis Reseñas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/acercaDe/acercaDe.html">Acerca De</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -78,37 +74,32 @@
     </div>
     <div class="row">
       <div class="col-md-4 text-center mb-4">
-        <img
-          src="/TPI_FRONT/img/perfil.jpg"
-          alt="Foto de perfil"
-          class="rounded-circle img-fluid shadow"
-          style="width: 150px; height: 150px;"
-        />
-        <h3 class="mt-3">Nombre de Usuario</h3>
-        <p class="text-muted">Usuario desde 2023</p>
+        <h4 class="mt-4 fw-bold">Nombre de usuario: </h4>
+        <h3 id="username" class="mt-3">Nombre de Usuario</h3> <!-- ID para el nombre de usuario -->
       </div>
       <div class="col-md-8">
         <div class="card shadow p-4">
           <h4 class="fw-bold">Información Personal</h4>
-          <p><strong>Email:</strong> usuario@correo.com</p>
-          <p><strong>Teléfono:</strong> +123 456 7890</p>
-          <p><strong>Dirección:</strong> Calle Falsa 123</p>
-          <h4 class="mt-4 fw-bold">Preferencias</h4>
-          <p><strong>Intereses:</strong> Cruceros, Actividades al aire libre, Comedia</p>
-          <p><strong>Paquetes adquiridos:</strong> Paquete Completo, Paquete Base</p>
+          <p><strong>Nombre:</strong> <span id="nombre">+123 456 7890</span></p> <!-- ID para teléfono -->
+          <p><strong>Apellido:</strong> <span id="apellido">Calle Falsa 123</span></p> <!-- ID para dirección -->
+          <h4 class="mt-4 fw-bold">Información General</h4>
+          <p><strong>Numero de habitacion:</strong> <span id="habitacion">Cruceros, Actividades al aire libre, Comedia</span></p> <!-- ID para intereses -->
+          <p><strong>Zona:</strong> <span id="zona">Paquete Completo, Paquete Base</span></p> <!-- ID para paquetes -->
+          <p><strong>Estado:</strong> <span id="estado">Paquete Completo, Paquete Base</span></p> <!-- ID para paquetes -->
+          <p><strong>Fecha de abordo:</strong> <span id="fechaInicio">Paquete Completo, Paquete Base</span></p> <!-- ID para paquetes -->
+          <p><strong>Fecha fin:</strong> <span id="fechaFin">Paquete Completo, Paquete Base</span></p> <!-- ID para paquetes -->
         </div>
       </div>
     </div>
     <div class="mt-5 text-center">
-      <a href="#" class="btn btn-primary me-2 shadow-sm">Editar Perfil</a>
-      <a href="#" class="btn btn-outline-secondary shadow-sm">Historial de Reservas</a>
-    </div>
+      <a href="#" class="btn btn-primary me-2 shadow-sm">Cambiar contraseña</a>
+      </div>
   </main>
-
   <footer class="bg-primary text-white text-center py-3 mt-5">
     <p class="mb-0">&copy; 2024 Costa Fascinosa. Todos los derechos reservados.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../miPerfil/miPerfil-App.js"></script>  <!-- Aquí cargamos el JS que hará la llamada a la API -->
 </body>
 </html>
