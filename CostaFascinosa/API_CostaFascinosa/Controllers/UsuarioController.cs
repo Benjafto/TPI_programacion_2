@@ -18,19 +18,12 @@ namespace API_CostaFascinosa.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetUsuarios(int id)
+        public IActionResult GetUsuarios()
         {
             {
                 try
                 {
-                    if (id == 0)
-                    {
-                        return BadRequest("Debe enviar datos válidos.");
-                    }
-                    else
-                    {
-                        return Ok( _serv.GetUsuario(id));
-                    }
+                        return Ok( _serv.GetUsuario(GetUserId()));   
                 }
                 catch (Exception)
                 {
@@ -73,5 +66,12 @@ namespace API_CostaFascinosa.Controllers
                 return true;    
             }
         }
+        private int GetUserId()
+        {
+            var userId = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+            return int.Parse(userId);
+        }
     }
+
 }
