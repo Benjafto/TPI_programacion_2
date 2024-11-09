@@ -10,29 +10,21 @@ namespace CostaFascinosa.Servicio.Implementacion
 {
     public class ReservasActividade_service : IReservasActividade_service
     {
-        public bool add(ReservasActividade reservaActividad)
+        private readonly IReservasActividade_repository _repo;
+
+        public ReservasActividade_service(IReservasActividade_repository repo)
         {
-            throw new NotImplementedException();
+            _repo = repo;
         }
 
-        public bool delete(int id)
+        public async Task<List<ReservasActividade>> GetReservasActividades(int id)
         {
-            throw new NotImplementedException();
+            return await _repo.GetReservasActividadesByUsuario(id);
         }
 
-        public ReservasActividade GetReservaActividad(int id)
+        public async Task<List<ReservasActividade>> GetReservasActividadesDeHoy(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<ReservasActividade> GetReservasActividades()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(ReservasActividade reservaActividad)
-        {
-            throw new NotImplementedException();
+            return await _repo.GetReservasActividadesDelDia(id);
         }
     }
 }

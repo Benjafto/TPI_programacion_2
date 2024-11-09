@@ -9,7 +9,9 @@ namespace CostaFascinosa.Repositorio.Interfaz
 {
     public interface IConsumosHabitacione_repository
     {
-        List<ConsumosHabitacione> GetConsumosHabitacionesByHabitacion(int numeroHabitacion);
+        Task<bool> Add(ConsumosHabitacione consumo);        
+        Task<decimal?> ObtenerTotalConsumosYReservas(int idUsuario);
+        Task<List<ConsumosHabitacione>> Get(int id);
 
     }
 }
