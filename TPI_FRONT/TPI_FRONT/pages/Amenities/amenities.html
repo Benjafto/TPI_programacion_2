@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="amenities_style.css">
+</head>
+<body>
+
+    <header class="header-area">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/TPI_FRONT/TPI_FRONT/pages/principal.html">
+                    <img src="/TPI_FRONT/TPI_FRONT/img/Logo.png" alt="Logo">
+                </a>
+                <h1>Costa Fascinosa</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="../principal/principal.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link"href="/TPI_FRONT/TPI_FRONT/pages/miPerfil.html">Mi Perfil</a></li>
+                        <li class="nav-item"><a class="nav-link"href="/TPI_FRONT/TPI_FRONT/pages/login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+      <video autoplay loop muted playsinline poster>
+        <source src="/img/Actividades.mp4" type="video/mp4">
+    </video>
+        <div class="container">
+            <h1 class="mb-4">Amenities</h1>
+            <p class="lead">Te mostramos más opciones que tiene el crucero</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="mb-4">
+            <label for="categoriaSelect" class="form-label">Filtrar por categoría:</label>
+            <select class="form-select" id="categoriaSelect">
+                <option hidden selected>Categorias...</option>
+                <!--Hecho en js app.js-->
+            </select>
+        </div>
+          <div class="row" id="row_amenities">
+          </div>  
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Costa Fascinosa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/pages/Amenities/Amenities-App.js"></script>
+</body>
+</html>
