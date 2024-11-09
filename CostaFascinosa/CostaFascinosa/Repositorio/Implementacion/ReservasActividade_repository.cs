@@ -1,5 +1,6 @@
 ﻿using CostaFascinosa.Data;
 using CostaFascinosa.Servicio.Interfaz;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,34 +18,20 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context = context;
         }
 
-        public bool add(ReservasActividade reservaActividad)
+        public async Task<List<ReservasActividade>> GetReservasActividadesByUsuario(int id)
         {
-            throw new NotImplementedException();
+            return await _context.ReservasActividades
+                .Where(x => x.IdConsumoNavigation.IdUsuario == id)
+                .Include(e => e.IdActividadNavigation)
+                .ToListAsync();
         }
 
-        public bool delete(int id)
+        public async Task<List<ReservasActividade>> GetReservasActividadesDelDia(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<ReservasActividade> GetReservasActividadesByActividad(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ReservasActividade> GetReservasActividadesByFechaYUsuario(int id, DateTime fechaInicial, DateTime fechaFinal)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ReservasActividade> GetReservasActividadesByUsuario(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(ReservasActividade reservaActividad)
-        {
-            throw new NotImplementedException();
+            return await _context.ReservasActividades
+                    .Where(x => x.IdConsumoNavigation.IdUsuario == id && x.FechaReservada == DateTime.Today)
+                    .Include(e => e.IdActividadNavigation)
+                    .ToListAsync();
         }
     }
 }

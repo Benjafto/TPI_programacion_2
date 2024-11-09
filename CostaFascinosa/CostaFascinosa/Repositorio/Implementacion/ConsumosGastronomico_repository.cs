@@ -1,5 +1,6 @@
 ﻿using CostaFascinosa.Data;
 using CostaFascinosa.Servicio.Interfaz;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,19 +18,25 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context = context;
         }
 
-        public bool add(ConsumosGastronomico consumosGastronomico)
+
+
+        public async Task<List<ConsumosGastronomico>> GetConsumosGastronomicosByUsuario(int id)
         {
-            throw new NotImplementedException();
+            return await _context.ConsumosGastronomicos.Where(x => x.IdConsumoNavigation.IdUsuario == id).ToListAsync();
         }
 
-        public List<ConsumosGastronomico> GetConsumosGastronomicosByFechaYUsuario(int id, DateTime fechaInicial, DateTime fechaFinal)
+        public async Task<List<ConsumoGastronomicoDTO>> GetTotalesConsumosGastronómicos(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<ConsumosGastronomico> GetConsumosGastronomicosByUsuario(int id)
-        {
-            throw new NotImplementedException();
+            return await _context.ConsumosHabitaciones
+                .Where(ch => ch.IdUsuario == id)
+                .SelectMany(ch => ch.ConsumosGastronomicos)
+                .Select(cg => new ConsumoGastronomicoDTO
+                {
+                    IdProducto = cg.IdProducto,
+                    Cantidad = cg.Cantidad,
+                    Precio = cg.Precio
+                })
+                .ToListAsync();
         }
     }
 }
