@@ -46,9 +46,15 @@ namespace CostaFascinosa.Servicio.Implementacion
             return user;
         }
 
-        public Task<bool> UpdateUsuario(Usuario usuario)
+        public async Task<bool> UpdateUsuario(int idUsuario, int contraseña)
         {
-            throw new NotImplementedException();
+            var user = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == idUsuario);
+            if (user == null)
+            {
+                return false;
+            }
+            user.Contraseña = contraseña;
+            return _context.SaveChanges() > 0;
         }
     }
 }

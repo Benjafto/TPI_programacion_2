@@ -18,29 +18,16 @@ namespace CostaFascinosa.Servicio.Implementacion
             _repository = repository;
         }
 
-        public bool add(Amenity amenity)
+        public async Task<List<Amenity>> GetAmenity(string nombre)
         {
-            throw new NotImplementedException();
+            return await _repository.GetAmenity(nombre);
         }
 
-        public bool delete(int id)
+        public async Task<List<Amenity>> GetAmenities()
         {
-            throw new NotImplementedException();
+            return await _repository.GetAmenities();
         }
 
-        public List<Amenity> GetAmenities()
-        {
-            return _repository.GetAmenities();
-        }
-
-        public Amenity GetAmenity(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Amenity amenity)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

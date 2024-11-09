@@ -18,59 +18,30 @@ namespace CostaFascinosa.Repositorio.Implementacion
             _context = context;
         }
 
-        public Actividade GetActividad(int id)
+        public async Task<List<Actividade>> GetActividad(string nombre)
         {
-            throw new NotImplementedException();
+            return await _context.Actividades
+                .Where(x => x.Nombre.StartsWith(nombre) || x.Descripcion.StartsWith(nombre))
+                .Include(e => e.IdCategoriaNavigation)
+                .Include(e => e.IdCodVestimentaNavigation)
+                .Include(e => e.IdDestinatarioNavigation)
+                .Include(e => e.IdCoordinadorNavigation)
+                .Include(e => e.IdTurnoNavigation)
+                .Include(e => e.IdZonaNavigation)
+                .ToListAsync();
         }
 
-        public List<Actividade> GetActividades()
+        public async Task<List<Actividade>> GetActividades()
         {
-            return  _context.Actividades.ToList();
-        }
-
-        public List<Actividade> GetActividadesByCategoria(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Actividade> GetActividadesByCodigoVestimenta(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Actividade> GetActividadesByDestinatario(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Actividade> GetActividadesByRequiereReserva(bool requiereReserva)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Actividade> GetActividadesByTurno(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Actividade> GetActividadesByZona(int id)
-        {
-            throw new NotImplementedException();
-        }
-        public bool add(Actividade actividad)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public bool update(Actividade actividad)
-        {
-            throw new NotImplementedException();
+            return await _context.Actividades
+                            .Include(e => e.IdCategoriaNavigation)
+                            .Include(e => e.IdCodVestimentaNavigation)
+                            .Include(e => e.IdDestinatarioNavigation)
+                            .Include(e => e.IdCoordinadorNavigation)
+                            .Include(e => e.IdTurnoNavigation)
+                            .Include(e => e.IdZonaNavigation)
+                            .ToListAsync();
         }
     }
+        
 }

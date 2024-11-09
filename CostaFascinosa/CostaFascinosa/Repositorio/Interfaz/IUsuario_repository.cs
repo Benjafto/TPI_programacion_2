@@ -13,8 +13,8 @@ namespace CostaFascinosa.Servicio.Interfaz
         UserDTO? GetUsuario(int id);
         Task<Usuario> GetUsuario(string username);
 
-        Task<bool> UpdateUsuario(Usuario usuario);
-
+        Task<bool> UpdateUsuario(int idUsuario, int contraseña);
+        
     }
 
 

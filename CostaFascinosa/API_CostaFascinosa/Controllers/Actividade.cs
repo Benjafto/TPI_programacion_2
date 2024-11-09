@@ -17,9 +17,15 @@ namespace API_CostaFascinosa.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok( _serv.GetActividades());
+            return Ok( await _serv.GetActividades());
+        }
+
+        [HttpGet("Buscar")]
+        public async Task<IActionResult> Get(string nombre)
+        {
+            return Ok(await _serv.GetActividad(nombre));
         }
     }
 }

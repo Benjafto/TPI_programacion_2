@@ -10,9 +10,7 @@ namespace CostaFascinosa.Servicio.Interfaz
     public interface IProductosGastronomico_repository
     {
 
-        ProductosGastronomico GetProductoGastronomico(int id);
-        ProductosGastronomico GetProductosGastronomicoByTipo(int id);
-        bool add(ProductosGastronomico productoGastronomico);
+        Task<List<ProductosGastronomico>> GetProductosGastronomico();
 
     }
 }

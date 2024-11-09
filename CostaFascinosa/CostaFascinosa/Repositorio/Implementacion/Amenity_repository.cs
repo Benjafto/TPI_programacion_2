@@ -1,5 +1,6 @@
 ﻿using CostaFascinosa.Data;
 using CostaFascinosa.Servicio.Interfaz;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,53 +18,28 @@ namespace CostaFascinosa.Servicio.Implementacion
             _context = context;
         }
 
-        public List<Amenity> GetAmenities()
+        public async Task<List<Amenity>> GetAmenities()
         {
-            return _context.Amenities.ToList();
+            return await _context.Amenities
+                    .Include(e => e.IdCategoriaNavigation)
+                    .Include(e => e.IdCodVestimentaNavigation)
+                    .Include(e => e.IdTurnoNavigation)
+                    .Include(e => e.IdZonaNavigation)
+                    .ToListAsync();
         }
 
-        public List<Amenity> GetAmenitiesByCategoria(int id)
+
+
+        public async Task<List<Amenity>> GetAmenity(string nombre)
         {
-            throw new NotImplementedException();
+            return await _context.Amenities
+                 .Where(x => x.Nombre.StartsWith(nombre))
+                 .Include(e => e.IdCategoriaNavigation)
+                 .Include(e => e.IdCodVestimentaNavigation)
+                 .Include(e => e.IdTurnoNavigation)
+                 .Include(e => e.IdZonaNavigation)
+                 .ToListAsync();
         }
 
-        public List<Amenity> GetAmenitiesByCodigoVestimenta(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Amenity> GetAmenitiesByDestinatario(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Amenity> GetAmenitiesByTurno(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Amenity> GetAmenitiesByZona(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Amenity GetAmenity(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool update(Amenity amenity)
-        {
-            throw new NotImplementedException();
-        }
-        public bool add(Amenity amenity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool delete(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
