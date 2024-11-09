@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using CostaFascinosa.Data;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace API_CostaFascinosa.Controllers
@@ -19,6 +20,7 @@ namespace API_CostaFascinosa.Controllers
 
 
         [HttpGet]
+        //[Authorize]
         public async Task<IActionResult> Get()
         {
             return Ok(await _serv.GetCategorias());

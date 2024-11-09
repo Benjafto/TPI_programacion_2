@@ -14,6 +14,8 @@ public partial class Usuario
 
     public int? Contraseña { get; set; }
 
+    //public string PasswordHash { get; set; }
+
     public int? IdPasajero { get; set; }
     [JsonIgnore]
     public virtual ICollection<ConsumosHabitacione> ConsumosHabitaciones { get; set; } = new List<ConsumosHabitacione>();
