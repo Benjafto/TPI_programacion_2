@@ -1,0 +1,142 @@
+/* General */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.header-area {
+    background-color: #343a40;
+    padding: 10px;
+}
+
+.header-area .navbar-brand img {
+    width: 100px;
+}
+
+/* Ajustes del contenedor de la hero section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem 0;
+}
+
+.hero video {
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+/* Ajustes de la sección de tarjetas */
+.card {
+    background-color: #f8f9fa;
+    border: none;
+}
+
+.card .card-body {
+    padding: 1rem;
+}
+
+.activities-item-rating {
+    font-size: 0.9rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.card-text,
+.activities-item-price,
+.activities-item-description {
+    font-size: 0.9rem;
+}
+
+.btn-reservar {
+    background-color: #007bff;
+    color: white;
+    border-radius: 25px;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    padding: 1rem 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Diseño móvil */
+@media (max-width: 768px) {
+    /* Ajustes de navegación */
+    .navbar-brand img {
+        width: 80px;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Ajustes del video en la hero section */
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes de las tarjetas */
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text,
+    .activities-item-price,
+    .activities-item-description {
+        font-size: 0.8rem;
+    }
+
+    .activities-item-rating {
+        font-size: 0.8rem;
+    }
+
+    /* Ajuste de contenedores */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Espaciado entre tarjetas */
+    .col-md-6.col-lg-3.mb-4 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ajuste adicional para pantallas pequeñas */
+@media (max-width: 576px) {
+    /* Ajustes de las tarjetas */
+    .card-title {
+        font-size: 0.9rem;
+    }
+
+    .card-text,
+    .activities-item-price,
+    .activities-item-description {
+        font-size: 0.8rem;
+    }
+
+    /* Ocultar título de la barra de navegación en pantalla muy pequeña */
+    .navbar h1 {
+        display: none;
+    }
+}
